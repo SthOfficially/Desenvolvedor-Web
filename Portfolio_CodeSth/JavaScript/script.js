@@ -19,3 +19,4 @@ function mostrarSecao() {
   });
 }
 window.addEventListener('scroll', mostrarSecao);
+mostrarSecao(); // Chama a função ao carregar a página para mostrar seções já visíveis
