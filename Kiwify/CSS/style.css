@@ -269,6 +269,28 @@ footer a:hover {
     box-shadow: 0 0 25px var(--principal);
 }
 
+.btn-redes {
+    position: relative;
+}
+
+.tooltip-copy {
+    position: absolute;
+    bottom: -40px;
+    background: #333;
+    color: #00F2FF; /* Ciano do seu logo */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.btn-redes:hover .tooltip-copy {
+    opacity: 1;
+}
+
 /* Ajuste para remover o quadro fantasma dos depoimentos */
 .grid-depoimentos {
     display: flex;
@@ -276,3 +298,4 @@ footer a:hover {
     justify-content: center; /* Garante que os cards de alunos fiquem no meio */
     gap: 20px;
 }
+
