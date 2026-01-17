@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeSth | Tech & Cursos</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+    <header>
+        <div class="container header-flex">
+            <a href="#home" class="logo">
+                <img src="Imagens/Logo.png" alt="Logo CodeSth" />
+            </a>
+            <nav class="menu" id="menu">
+                <a href="#home">Início</a>
+                <a href="#cursos" class="destaque-menu">Cursos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h1>Impulsione sua carreira com a <span>CodeSth</span></h1>
+            <p>Desenvolvimento Web moderno e cursos práticos para você dominar o mercado digital.</p>
+            <a href="#cursos" class="btn-principal">Conhecer Cursos</a>
+        </div>
+        <div class="foto">
+            <img src="Imagens/Logo.png" alt="Stephanie Silva" />
+        </div>
+    </section>
+
+    <section id="cursos">
+        <div class="container">
+            <h2 class="titulo-sessao">Nossos Cursos</h2>
+            <div class="grid-cursos">
+                <div class="card-curso">
+                    <div class="badge">Vagas Abertas</div>
+                    <h3>Dominando HTML & CSS</h3>
+                    <p>Do zero ao primeiro site profissional com design moderno.</p>
+                    <a href="#" class="btn-curso">Saiba Mais</a>
+                </div>
+                <div class="card-curso">
+                    <div class="badge">Em Breve</div>
+                    <h3>JavaScript para Negócios</h3>
+                    <p>Aprenda a criar automações e dashboards interativos.</p>
+                    <a href="#" class="btn-curso disabled">Lista de Espera</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+    <div class="container">
+        <h2 class="titulo-sessao">O que dizem os alunos</h2>
+        <div class="grid-depoimentos">
+            
+            <div class="card-depoimento">
+                <div class="estrelas">★★★★★</div>
+                <p>"O curso de HTML/CSS da CodeSth mudou minha visão sobre design. Consegui meu primeiro freela em duas semanas!"</p>
+                <div class="aluno">
+                    <img src="https://i.pravatar.cc/150?u=1" alt="Aluno 1">
+                    <div>
+                        <strong>Ricardo Alves</strong>
+                        <span>Aluno de Front-end</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-depoimento">
+                <div class="estrelas">★★★★★</div>
+                <p>"As dashboards de Looker Studio da Stephanie são de outro nível. Economizei horas de trabalho manual."</p>
+                <div class="aluno">
+                    <img src="https://i.pravatar.cc/150?u=2" alt="Aluno 2">
+                    <div>
+                        <strong>Mariana Costa</strong>
+                        <span>Empresária</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-depoimento">
+                <div class="estrelas">★★★★★</div>
+                <p>"Explicação clara e suporte incrível. Recomendo os cursos da CodeSth para quem quer aprender de verdade."</p>
+                <div class="aluno">
+                    <img src="https://i.pravatar.cc/150?u=3" alt="Aluno 3">
+                    <div>
+                        <strong>Carlos Mendes</strong>
+                        <span>Desenvolvedor Júnior</span>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="contato">
+       <div class="container contato-container">
+        <h2 class="titulo-sessao">Vamos conversar?</h2>
+        <div class="botoes-contato-flex">
+            <a href="https://www.instagram.com/_sth.officially_/" target="_blank" class="btn-redes" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:stephanie.gcsilva@outlook.com.br" class="btn-redes" title="E-mail">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <p>© 2025 CodeSth – Transformando código em lucro.</p>
+    </footer>
+
+    <a href="https://wa.me/5514991838153" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
