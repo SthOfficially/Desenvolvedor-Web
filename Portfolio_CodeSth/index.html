@@ -1,138 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CodeSth</title>
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeSth - Portfólio</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Acessibilidade VLibras -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
-  <!-- Cabeçalho com Logo -->
-  <header>
-    <a href="#home" class="logo">
-      <img src="Imagens/20250430_111047_0000.png" alt="Logo CodeSth" />
+    <header id="header">
+        <div class="container header-flex">
+            <a href="#home" class="logo">
+                <img src="Imagens/20250430_111047_0000.png" alt="Logo">
+            </a>
+
+            <div class="menu-mobile" id="mobile-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="menu" id="nav-menu">
+                <a href="#home">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container flex-home">
+            <div class="home-content">
+                <h1>Bem-vindo à <span>CodeSth</span></h1>
+                <p>Crio sites modernos, rápidos e funcionais para o seu negócio.</p>
+                <a href="#contato" class="btn-principal">Fale Comigo</a>
+            </div>
+            <div class="foto">
+                <img src="./Imagens/IMG_20241025_220925_772.webp" alt="Foto de Stephanie Silva" />
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container text-center">
+            <h2 class="titulo-sessao">Sobre Mim</h2>
+            <p>Sou desenvolvedora front-end e adoro transformar ideias em sites bonitos e responsivos.</p>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <h2 class="titulo-sessao">Meus Serviços</h2>
+            <div class="grid-cursos">
+                <div class="card-curso">
+                    <div class="badge">Modelos</div>
+                    <h3>Criação de Sites</h3>
+                    <p>Modelos exclusivos para portfólios e landing pages modernos e rápidos.</p>
+                </div>
+                <div class="card-curso">
+                    <div class="badge">Análise</div>
+                    <h3>Gráficos Financeiros</h3>
+                    <p>Desenvolvimento de dashboards personalizados no Looker Studio.</p>
+                </div>
+                <div class="card-curso">
+                    <div class="badge">Segurança</div>
+                    <h3>Segurança de Dados</h3>
+                    <p>Tratamento de dados com total sigilo e proteção empresarial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="container">
+            <h2 class="titulo-sessao">Meus Projetos</h2>
+            <div class="grid-projetos">
+                <div class="card-projeto">
+                    <div class="badge">Site</div>
+                    <h3>Black Elétrica</h3>
+                    <p class="sobre-projeto">Interface para prestadores de serviços com foco em conversão.</p>
+                    <a href="https://github.com/SthOfficially/Projetor/tree/main/BlackEletrica" target="_blank" class="btn-link">Ver Detalhes</a>
+                </div>
+
+                <div class="card-projeto">
+                    <div class="badge">Site</div>
+                    <h3>Café & Letras</h3>
+                    <p class="sobre-projeto">Landing page que prioriza o cardápio e a identidade visual.</p>
+                    <a href="https://github.com/SthOfficially/Projetor/tree/main/Cafe%26Letras" target="_blank" class="btn-link">Ver Detalhes</a>
+                </div>
+
+                <div class="card-projeto">
+                    <div class="badge">Looker Studio</div>
+                    <h3>Gestão de Vendas</h3>
+                    <p class="sobre-projeto">Dashboard financeiro para monitoramento de lucro em tempo real.</p>
+                    <a href="#" target="_blank" class="btn-link">Acessar Painel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cursos">
+    <div class="container text-center">
+      <h2 class="titulo-sessao">Cursos com Certificado</h2>
+      <div class="grid-cursos">
+          <a href="https://sthofficially.github.io/Desenvolvedor-Web/Kiwify/" target="_blank" class="btn-principal">Conhecer Cursos</a>
+      </div>
+    </div>
+  </section>
+  
+    <section id="contato">
+        <div class="container contato-container">
+            <h2 class="titulo-sessao">Contato</h2>
+            <p>Segurança e profissionalismo para o seu projeto digital.</p>
+            <div class="botoes-contato-flex">
+                <a href="mailto:stephanie.gcsilva@outlook.com.br" class="btn-redes" title="E-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/_sth.officially_/" target="_blank" class="btn-redes" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 CodeSth – Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5514991838153" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
-    <div class="hamburguer" id="hamburguer">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="menu" id="menu">
-      <a href="#home">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
 
-  <!-- Seções -->
-  <section id="home">
-    <div class="home-content">
-      <h2>Bem-vindo ao meu portfólio!</h2>
-      <p>Crio sites modernos, rápidos e funcionais com HTML, CSS e JavaScript.</p>
-    </div>
-    <div class="foto">
-      <img src="Imagens/IMG_20241025_220925_772.webp" alt="Foto de Stephanie Silva" />
-    </div>
-  </section>
+    <script>
+        const btnMobile = document.getElementById('mobile-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const menuLinks = document.querySelectorAll('.menu a');
+        const header = document.getElementById('header');
+        const cards = document.querySelectorAll('.card-projeto, .card-curso');
+        let lastScrollTop = 0;
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Sou desenvolvedora front-end e adoro transformar ideias em sites bonitos e responsivos.</p>
-  </section>
+        // 1. Abrir/Fechar Menu Mobile
+        btnMobile.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = btnMobile.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
 
-  <section id="projetos">
-    <h2>Meus Projetos</h2>
-    <div class="projetos">
-      <div class="projeto">
+        // 2. Lógica de Scroll (Sumir menu + Círculo ativo dinâmico)
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      <h3>Projeto 1 - Black Elétrica</h3>
-        <p>Site fictício desenvolvido com modelos de HTML, CSS e JavaScript.</p>
-        <a href="https://github.com/SthOfficially/Projetor/tree/main/BlackEletrica" target="_blank">Ver no GitHub</a>
-      </div>
+            // Fazer o menu sumir ao descer
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 
-      <div class="projeto">
-        <h3>Projeto 2 - Café & Letras</h3>
-        <p>Site fictício criado com modelos de HTML, CSS e JavaScript, incluindo uma galeria.</p>
-        <a href="https://github.com/SthOfficially/Projetor/tree/main/Cafe%26Letras" target="_blank">Ver no GitHub</a>
-      </div>
-      <div class="projeto">
-        <h3>Projeto 3 - Açaí & Alegria</h3>
-        <p>Site pessoal desenvolvido com HTML, CSS e JavaScript.</p>
-        <a href="https://github.com/SthOfficially/Projetor/tree/main/A%C3%A7ai%26Alegria" target="_blank">Ver no GitHub</a>
-      </div>
+            // Mover o círculo conforme a seção na tela
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.offsetHeight;
+                if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+                    menuLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${section.id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { passive: true });
 
-      <div class="projeto">
-        <h3>Projeto 4 - Gestão Vendas Sorveteria</h3>
-        <p>Desenvolvido dentro do Looker Studio.</p>
-        <img src="https://lookerstudio.google.com/reporting/cb9671e2-1fc4-4619-bc3f-0727c03d2c40" alt="Gestão Vendas Sorveteria" />
-       </div>
+        // 3. Efeito 3D nos Cards
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const rotateX = (y - rect.height / 2) / 10;
+                const rotateY = (x - rect.width / 2) / -10;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            });
+        });
 
-      <div class="projeto">
-        <h3>Projeto 5 - Portfólio Pessoal</h3>
-        <p>Meu portfólio pessoal desenvolvido com HTML, CSS e JavaScript.</p>
-        <img src="Imagens/portfolio_screenshot.png" alt="Screenshot do Portfólio Pessoal" />
-       </div>
+        // 4. Clique Suave e fechar menu mobile
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                navMenu.classList.remove('active');
+                btnMobile.querySelector('i').className = 'fas fa-bars';
 
-       <div class="projeto">
-        <h3>Projeto 6 - Portfólio Pessoal</h3>
-        <p>Meu portfólio pessoal desenvolvido com HTML, CSS e JavaScript.</p>
-        <img src="Imagens/portfolio_screenshot.png" alt="Screenshot do Portfólio Pessoal" />
-       </div>
-  </section>
-
-  <section id="cursos">
-    <h2>Cursos</h2>
-    <ul>
-      <li>Curso de HTML e CSS - Alura</li>
-      <p></p>
-      <a href="https://www.alura.com.br/curso-online-html-css" target="_blank">Certificado HTML e CSS</a>
-      <li>Curso de JavaScript - Alura</li>
-      <p></p>
-      <a href="https://www.alura.com.br/curso-online-javascript" target="_blank">Certificado JavaScript</a>
-      <li>Curso de Desenvolvimento Web - Udemy</li>
-      <p></p>
-      <a href="https://www.udemy.com/certificate/UC-1234567890/" target="_blank">Certificado Desenvolvimento Web</a>
-    </ul>
-  </section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>📱 WhatsApp: (14) 99183-8153</p>
-    <p>📧 E-mail: stephanie.gcsilva@outlook.com.br</p>
-  </section>
-
-  <footer>
-    <div class="redes-sociais">
-      <a href="https://www.instagram.com/_sth.officially_/?next=%2F" target="_blank"><i class="fab fa-instagram"></i>
-      </a>
-  </div>
-  <a href="https://wa.me/5514991838153?text=Olá!%20Vi%20o%20site%20da%20CodeSth%20e%20gostaria%20de%20mais%20informações." 
-   class="whatsapp-btn" 
-   target="_blank" 
-   rel="noopener noreferrer">
-    <i class="fab fa-whatsapp"></i>
-    <span class="tooltip-whatsapp">Fale conosco</span>
-  </a>
-    <p>© 2025 CodeSth – Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="JavaScript/script.js"></script>
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
