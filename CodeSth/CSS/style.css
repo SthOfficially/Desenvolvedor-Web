@@ -95,16 +95,45 @@ section { padding: 100px 0; }
 #home {
     min-height: 100vh;
     display: flex;
+    align-items: center; /* Centraliza verticalmente na tela */
+    justify-content: center; /* Centraliza horizontalmente na tela */
+    padding: 80px 20px;
+}
+
+.flex-home {
+    display: flex;
+    flex-direction: row; /* Garante que fiquem lado a lado */
     align-items: center;
-    padding-top: 100px;
+    justify-content: center;
+    gap: 50px; /* Espaço entre a foto e o texto */
+    width: 100%;
 }
 
-.home-content h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
+.foto img {
+    max-width: 400px; /* Ajuste o tamanho da foto aqui */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
+.home-content {
+    max-width: 500px;
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+}
+
+/* IMPORTANTE: No celular, a foto fica em cima e o texto embaixo */
+@media (max-width: 768px) {
+    .flex-home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content {
+        text-align: center;
+    }
+    .foto img {
+        max-width: 250px;
+    }
+}
 .home-content span { color: var(--principal); }
 
 /* Botões Principais */
@@ -185,7 +214,23 @@ section { padding: 100px 0; }
 /* ==========================================================================
    4. CONTATO E RODAPÉ
    ========================================================================== */
-.botoes-contato-flex {
+
+   #contato {
+    min-height: 100vh; /* Faz a seção ocupar a tela inteira */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza na vertical */
+    align-items: center;     /* Centraliza na horizontal */
+    text-align: center;
+}
+
+.contato-container {
+    width: 100%;
+    max-width: 800px; /* Limita a largura para o texto não ficar esticado demais */
+    padding: 20px;
+}
+
+   .botoes-contato-flex {
     display: flex;
     gap: 20px;
     justify-content: center;
