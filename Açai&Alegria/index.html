@@ -3,94 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Açaí & Alegria</title>
-  <link rel="stylesheet" href="CSS/style.css" />
+  <title>Açaí Tropical | Energia e Sabor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/f267bbc3d3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Açaí & Alegria</h1>
-      <div class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-list" id="nav-list">
-        <li><a href="#about">Cardápio</a></li>
-        <li><a href="#gallery">Galeria</a></li>
-        <li><a href="#location">Localização</a></li>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <h1 class="logo">Açaí <span>Tropical</span></h1>
+      <ul class="nav-menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#menu">Tamanhos</a></li>
+        <li><a href="#localizacao">Onde Estamos</a></li>
+        <li><a href="#contato" class="btn-nav">Pedir Agora</a></li>
       </ul>
-    </nav>
-    <p class="slogan">O sabor que refresca o corpo e alegra a alma!</p>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-overlay">
+        <div class="container hero-content">
+            <h2>O sabor da Amazônia<br>no seu copo! 🍧</h2>
+            <p>Açaí artesanal, frutas frescas e energia pura.</p>
+            <a href="#menu" class="btn-primary">Ver Cardápio</a>
+        </div>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>Nosso Cardápio</h2>
-    <ul>
-      <li>🥣 300ml – R$10,00</li>
-      <li>🥣 400ml – R$12,00</li>
-      <li>🥣 500ml – R$14,00</li>
-      <li>🥣 700ml – R$17,00</li>
-      <li>🥣 1 Litro – R$22,00</li>
-    </ul>
-    <p><strong>Acompanhamentos:</strong></p>
-    <ul>
-      <li>🍌 Banana</li>
-      <li>🍓 Morango</li>
-      <li>🥥 Leite em pó</li>
-      <li>🍫 Chocolate</li>
-      <li>🍯 Leite condensado</li>
-      <li>🍪 Farofa crocante</li>
-      <li>🍬 Confetes coloridos</li>
-      <li>🥜 Amendoim</li>
-      <li>🍯 Mel</li>
-      <li>🧉 Granola</li>
-    </ul>
-  </section>
-
-  <section id="gallery">
-    <h2>Galeria Deliciosa</h2>
-    <div class="gallery">
-      <img src="Imagens/ACAÍ NA PRATICA.jpg" alt="Açaí 1" />
-      <img src="Imagens/baixados.jpg" alt="Açaí 2" />
-      <img src="Imagens/fotos fake de açaí.jpg" alt="Açaí 3" />
+  <section id="menu" class="section-pad">
+    <div class="container">
+      <h2 class="section-title">Nossos Tamanhos</h2>
+      <p class="section-subtitle">Escolha a dose certa de energia para hoje.</p>
+      
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="icon-box"><i class="fas fa-glass-whiskey"></i></div>
+          <h3>Pequeno (300ml)</h3>
+          <span class="price">R$ 12,00</span>
+        </div>
+        
+        <div class="menu-card popular">
+          <div class="badge">Mais Pedido!</div>
+          <div class="icon-box"><i class="fas fa-coffee"></i></div>
+          <h3>Médio (500ml)</h3>
+          <span class="price">R$ 16,00</span>
+        </div>
+        
+        <div class="menu-card">
+          <div class="icon-box"><i class="fas fa-prescription-bottle"></i></div>
+          <h3>Grande (700ml)</h3>
+          <span class="price">R$ 20,00</span>
+        </div>
+        
+        <div class="menu-card">
+          <div class="icon-box"><i class="fas fa-bucket"></i></div>
+          <h3>Família (1 Litro)</h3>
+          <span class="price">R$ 28,00</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="location">
-    <h2>Onde Estamos</h2>
-    <p><strong>Endereço:</strong> Avenida Tropical, 987 – Bairro do Sol</p>
-    <p><strong>Telefone:</strong> (00) 98888-0000</p>
-    <p><strong>Email:</strong> contato@acaialegria.com</p>
-    <p><strong>Horário:</strong> Todos os dias, das 10h às 22h</p>
-
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-
-    <div class="social-links">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
+  <section id="localizacao" class="section-pad bg-light">
+    <div class="container">
+      <h2 class="section-title">Nossa Loja</h2>
+      <div class="location-wrapper">
+        <div class="location-info">
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Endereço</h4>
+            <p>Av. Tropical, 987 - Bairro do Sol<br>Sua Cidade - UF</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h4>Horário</h4>
+            <p>Segunda a Sábado<br>11h às 22h</p>
+          </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQ2LjgiUyA0NsKwMzknMjguOCJX!5e0!3m2!1spt-BR!2sbr!4v1625000000000!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Açaí & Alegria | Todos os direitos reservados</p>
+  <footer id="contato">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h3>Açaí Tropical</h3>
+        <p>O melhor açaí da região, feito com ingredientes selecionados.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Redes Sociais</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      <p>© 2026 Açaí Tropical | Todos os direitos reservados.</p>
+    </div>
   </footer>
 
-  <!-- Acessibilidade VLibras -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    function toggleMenu() {
+        const menu = document.querySelector('.nav-menu');
+        menu.classList.toggle('active');
+    }
   </script>
-
-  <script src="JavaScript/script.js"></script>
 </body>
 </html>

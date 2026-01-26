@@ -1,20 +1,24 @@
-// Animação ao rolar
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('section').forEach(sec => {
-    const top = window.scrollY;
-    const offset = sec.offsetTop - 400;
-    const height = sec.offsetHeight;
+// Menu Mobile Responsivo
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-    if (top >= offset && top < offset + height) {
-      sec.classList.add('show');
-    }
-  });
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
 });
 
-// Menu hambúrguer
-const toggle = document.querySelector(".menu-toggle");
-const navList = document.querySelector(".nav-list");
+// Fechar o menu ao clicar em um link
+document.querySelectorAll(".nav-menu li a").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}));
 
-toggle.addEventListener("click", () => {
-  navList.classList.toggle("show");
+// Efeito de sombra na navbar ao rolar
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        nav.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+    } else {
+        nav.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+    }
 });

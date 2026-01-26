@@ -1,262 +1,145 @@
-/* Reset básico e configuração inicial */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg-cream: #F9F7F2; /* Cor de fundo creme suave */
+  --coffee-dark: #4A3B32; /* Marrom escuro elegante */
+  --coffee-light: #8D7B68; /* Marrom médio */
+  --gold-accent: #C8B273; /* Dourado fosco */
+  --white: #FFFFFF;
 }
 
-/* Estilização do corpo da página */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--coffee-dark);
   line-height: 1.6;
-  background: #fdfcf9;
-  color: #333;
-  overflow-x: hidden;
-  padding-top: 100px; /* Espaço para a navbar fixa */
 }
 
-/* Estilo do cabeçalho */
-header {
-  background: #4b2e2e;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  animation: fadeDown 1s ease-in-out;
+h1, h2, h3, h4, .logo, .subtitle {
+  font-family: 'Cormorant Garamond', serif; /* Fonte clássica */
 }
 
-/* Logo estilizado */
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  animation: slideInLeft 1s ease-in-out;
-}
-
-/* Slogan abaixo da logo */
-.slogan {
-  font-size: 1rem;
-  margin-top: 10px;
-  animation: slideInRight 1s ease-in-out;
-}
-
-/* Navbar fixa no topo */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  padding: 20px 8%;
+  background: var(--bg-cream);
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 1000;
-  background-color: #4b2e2e;
-  padding: 10px 20px;
+  border-bottom: 1px solid rgba(74, 59, 50, 0.1);
 }
 
-/* Lista de navegação */
-.nav-list {
-  list-style: none;
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--coffee-dark);
+  letter-spacing: 1px;
+}
+.logo span { color: var(--gold-accent); font-style: italic; }
+
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--coffee-dark); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+.nav-links a:hover { color: var(--gold-accent); }
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  /* Dica: Use uma foto clara, com muita luz natural */
+  background: linear-gradient(rgba(249,247,242,0.8), rgba(249,247,242,0.6)), url('../imagens/Coffee Time!.jpg') center/cover;
   display: flex;
-  gap: 20px;
-}
-
-/* Links da navegação */
-.nav-list li a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.nav-list li a:hover,
-.nav-list li a:focus {
-  color: #ffd700;
-}
-
-/* Ícone do menu para mobile */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Seções com espaçamento e animação de entrada */
-section {
-  padding: 50px 20px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  animation: fadeUp 1s ease-in;
+  padding: 0 20px;
 }
 
-/* Conteúdo interno da seção com entrada animada */
-section h2,
-section p {
-  animation: fadeIn 1.2s ease-in;
+.hero-content { max-width: 800px; animation: fadeIn 1.5s ease; }
+
+.subtitle { display: block; font-size: 1.1rem; color: var(--coffee-light); margin-bottom: 10px; letter-spacing: 3px; text-transform: uppercase; }
+
+.hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 400; color: var(--coffee-dark); }
+.hero p { font-size: 1.2rem; color: var(--coffee-light); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+.btn-elegant {
+  padding: 15px 40px;
+  background: transparent;
+  border: 1px solid var(--coffee-dark);
+  color: var(--coffee-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  transition: 0.4s;
 }
 
-/* Galeria de imagens responsiva */
-.galeria {
+.btn-elegant:hover { background: var(--coffee-dark); color: var(--white); }
+
+/* Features */
+#features {
   display: flex;
-  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 8%;
+  background: var(--white);
 }
 
-/* Imagens com efeito hover e animação ao carregar */
-.galeria img {
-  width: 300px;
-  border-radius: 8px;
-  transition: transform 0.4s ease, opacity 0.4s;
-  animation: zoomIn 0.8s ease;
+.feature-box { text-align: center; width: 250px; }
+.feature-box i { font-size: 2rem; color: var(--gold-accent); margin-bottom: 15px; }
+.feature-box h3 { font-size: 1.4rem; margin-bottom: 10px; }
+.feature-box p { font-size: 0.9rem; color: var(--coffee-light); }
+
+/* Menu Section */
+.menu-section { padding: 80px 8%; }
+.section-title { text-align: center; font-size: 3rem; margin-bottom: 50px; font-weight: 400; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
 }
 
-/* Hover das imagens */
-.galeria img:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+.menu-item { border-bottom: 1px solid rgba(74, 59, 50, 0.1); padding-bottom: 20px; }
+.item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.item-header h4 { font-size: 1.5rem; font-weight: 400; }
+.price { font-family: 'Lato', sans-serif; font-weight: bold; color: var(--coffee-light); }
+.description { font-style: italic; color: var(--coffee-light); font-size: 0.95rem; }
+
+/* Banner Visual */
+.visual-banner {
+  height: 400px;
+  background: fixed url('../imagens/Coffee and books - Cozy aesthetic.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-/* Ícones de redes sociais com animação */
-.social-links a {
-  font-size: 1.8rem;
-  margin: 10px;
-  color: #4b2e2e;
-  transition: transform 0.3s, color 0.3s;
-  animation: popUp 1s ease forwards;
-  animation-delay: 0.5s;
-}
+.visual-banner::after { content: ''; position: absolute; width: 100%; height: 100%; background: rgba(74, 59, 50, 0.4); }
 
-.social-links a:hover {
-  transform: scale(1.2);
-  color: #d28c3b;
-}
+.banner-text { position: relative; z-index: 2; color: var(--white); text-align: center; padding: 20px; }
+.banner-text h2 { font-size: 2.5rem; font-style: italic; }
 
-/* Botões animados (caso use no site) */
-button, .btn {
-  background-color: #4b2e2e;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  animation: fadeUp 1s ease-in;
-}
+/* Footer */
+footer { background: var(--coffee-dark); color: var(--bg-cream); padding: 60px 8% 20px; }
+.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 40px; }
+.col h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--gold-accent); }
+.socials a { color: var(--bg-cream); font-size: 1.5rem; margin-right: 20px; transition: 0.3s; }
+.socials a:hover { color: var(--gold-accent); }
+.copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.6; }
 
-button:hover, .btn:hover {
-  background-color: #d28c3b;
-  transform: scale(1.05);
-}
-
-/* Rodapé */
-footer {
-  background: #4b2e2e;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  animation: fadeUp 1s ease-in;
-}
-
-/* Animações */
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Mobile */
+.menu-icon { display: none; font-size: 1.5rem; cursor: pointer; }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-icon { display: block; }
+  .hero h1 { font-size: 3rem; }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes popUp {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    background-color: #4b2e2e;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    padding: 10px;
-  }
-
-  .nav-list.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
-@media (max-width: 600px) {
-  .galeria img {
-    width: 100%;
-    max-width: 90%;
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

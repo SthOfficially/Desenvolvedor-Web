@@ -3,84 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Café & Letras</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+  <title>Café & Letras | Pausa para a Alma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/style.css" />
   <script src="https://kit.fontawesome.com/f267bbc3d3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Café & Letras</h1>
-      <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+
+  <nav class="navbar">
+    <div class="logo">Café <span>&</span> Letras</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Início</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#ambiente">Ambiente</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-list" id="nav-list">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#livros">Livros</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-    <p class="slogan">Um espaço para quem ama histórias — no papel e na xícara.</p>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <span class="subtitle">Café Especial • Livraria • Conforto</span>
+      <h1>Onde as histórias<br>encontram o sabor.</h1>
+      <p>Um refúgio urbano para quem aprecia um bom capítulo e um café perfeito.</p>
+      <a href="#menu" class="btn-elegant">Ver Cardápio</a>
+    </div>
   </header>
 
-  <!-- Sobre -->
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>O Café & Letras nasceu do amor pelos livros e pela boa companhia de um café quentinho. Um lugar para leitores, escritores, estudantes e sonhadores.</p>
-  </section>
-
-  <!-- Livros -->
-  <section id="livros">
-    <h2>Livros & Sabores</h2>
-    <p>Seleção especial de livros: clássicos, poesias, romances. Acompanhe com cafés especiais, bolos e quitutes fresquinhos!</p>
-  </section>
-
-  <!-- Galeria -->
-  <section id="galeria">
-    <h2>Galeria</h2>
-    <div class="galeria">
-      <img src="imagens/Coffee and books - Cozy aesthetic.jpg" alt="Café e livro" />
-      <img src="imagens/baixados.jpg" alt="Leitura" />
-      <img src="imagens/Coffee Time!.jpg" alt="Interior do café" />
+  <section id="features">
+    <div class="feature-box">
+      <i class="fas fa-mug-hot"></i>
+      <h3>Grãos Selecionados</h3>
+      <p>Torra artesanal e moagem na hora.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-book-reader"></i>
+      <h3>Acervo Literário</h3>
+      <p>Leia nossos livros enquanto degusta.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-wifi"></i>
+      <h3>Coworking Calm</h3>
+      <p>Wi-fi rápido e silêncio produtivo.</p>
     </div>
   </section>
 
-  <!-- Contato -->
-  <section id="contato">
-    <h2>Onde Estamos</h2>
-    <p>📍 Rua das Palavras, 123 – Centro Literário<br />
-       📞 (00) 90000-0000<br />
-       📩 contato@cafeeletras.com<br />
-       📸 @cafeeletras<br />
-       🕰️ Segunda a sábado, 9h às 19h</p>
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 class="section-title">Nossos Clássicos</h2>
+      <div class="menu-grid">
+        
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Cappuccino Italiano</h4>
+            <span class="price">R$ 12</span>
+          </div>
+          <p class="description">Expresso, leite vaporizado e cacau 70%.</p>
+        </div>
 
-    <!-- Redes Sociais -->
-    <div class="social-links">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
-    </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Latte Macchiato</h4>
+            <span class="price">R$ 14</span>
+          </div>
+          <p class="description">Leite cremoso manchado com expresso suave.</p>
+        </div>
 
-    <!-- Google Maps -->
-    <div class="mapa">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.030184227154!2d-46.656572!3d-23.602321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM2JzA4LjMiUyA0NsKwMzknMjMuNiJX!5e0!3m2!1spt-BR!2sbr!4v1623268480010!5m2!1spt-BR!2sbr" 
-        width="100%" 
-        height="250" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-      </iframe>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Bolo Red Velvet</h4>
+            <span class="price">R$ 16</span>
+          </div>
+          <p class="description">Massa aveludada vermelha com cream cheese.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Chá de Hibisco</h4>
+            <span class="price">R$ 10</span>
+          </div>
+          <p class="description">Infusão natural com frutas vermelhas.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Café & Letras. Todos os direitos reservados.</p>
+  <section id="ambiente" class="visual-banner">
+    <div class="banner-text">
+      <h2>"A leitura é para a mente o que o café é para o corpo."</h2>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <div class="footer-content">
+      <div class="col">
+        <h3>Café & Letras</h3>
+        <p>Aberto todos os dias: 09h - 20h</p>
+      </div>
+      <div class="col">
+        <h3>Endereço</h3>
+        <p>Rua da Paz, 45 - Centro Histórico</p>
+      </div>
+      <div class="col socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Café & Letras. Design Minimalista.</div>
   </footer>
 
   <script src="JavaScript/script.js"></script>
