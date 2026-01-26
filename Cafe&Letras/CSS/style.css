@@ -1,11 +1,13 @@
+/* 1. VARIÁVEIS DE CORES */
 :root {
-  --bg-cream: #F9F7F2; /* Cor de fundo creme suave */
-  --coffee-dark: #4A3B32; /* Marrom escuro elegante */
-  --coffee-light: #8D7B68; /* Marrom médio */
-  --gold-accent: #C8B273; /* Dourado fosco */
+  --bg-cream: #F9F7F2; 
+  --coffee-dark: #4A3B32; 
+  --coffee-light: #8D7B68; 
+  --gold-accent: #C8B273; 
   --white: #FFFFFF;
 }
 
+/* 2. RESET BÁSICO */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -13,13 +15,16 @@ body {
   background-color: var(--bg-cream);
   color: var(--coffee-dark);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .logo, .subtitle {
-  font-family: 'Cormorant Garamond', serif; /* Fonte clássica */
+  font-family: 'Cormorant Garamond', serif;
 }
 
-/* Navbar */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* 3. NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -32,40 +37,33 @@ h1, h2, h3, h4, .logo, .subtitle {
   border-bottom: 1px solid rgba(74, 59, 50, 0.1);
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--coffee-dark);
-  letter-spacing: 1px;
-}
+.logo { font-size: 2rem; font-weight: 600; color: var(--coffee-dark); }
 .logo span { color: var(--gold-accent); font-style: italic; }
 
 .nav-links { display: flex; list-style: none; gap: 30px; }
-.nav-links a { text-decoration: none; color: var(--coffee-dark); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+.nav-links a { 
+  text-decoration: none; color: var(--coffee-dark); 
+  font-size: 0.9rem; text-transform: uppercase; 
+  letter-spacing: 1px; transition: 0.3s; 
+}
 .nav-links a:hover { color: var(--gold-accent); }
 
-/* Hero Section */
+/* 4. HERO SECTION */
 .hero {
-  height: 90vh;
-  /* Dica: Use uma foto clara, com muita luz natural */
-  background: linear-gradient(rgba(249,247,242,0.8), rgba(249,247,242,0.6)), url('../imagens/Coffee Time!.jpg') center/cover;
+  height: 85vh;
+  background: linear-gradient(rgba(249,247,242,0.7), rgba(249,247,242,0.5)), 
+              url('../imagens/Coffee Time!.jpg') center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px;
 }
 
-.hero-content { max-width: 800px; animation: fadeIn 1.5s ease; }
-
-.subtitle { display: block; font-size: 1.1rem; color: var(--coffee-light); margin-bottom: 10px; letter-spacing: 3px; text-transform: uppercase; }
-
-.hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 400; color: var(--coffee-dark); }
-.hero p { font-size: 1.2rem; color: var(--coffee-light); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; font-weight: 400; }
+.subtitle { display: block; font-size: 1.1rem; color: var(--coffee-light); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
 
 .btn-elegant {
   padding: 15px 40px;
-  background: transparent;
   border: 1px solid var(--coffee-dark);
   color: var(--coffee-dark);
   text-decoration: none;
@@ -73,73 +71,108 @@ h1, h2, h3, h4, .logo, .subtitle {
   letter-spacing: 2px;
   font-size: 0.8rem;
   transition: 0.4s;
+  display: inline-block;
 }
-
 .btn-elegant:hover { background: var(--coffee-dark); color: var(--white); }
 
-/* Features */
+/* 5. FEATURES */
 #features {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 60px 8%;
+  gap: 50px;
+  padding: 80px 8%;
   background: var(--white);
 }
-
 .feature-box { text-align: center; width: 250px; }
 .feature-box i { font-size: 2rem; color: var(--gold-accent); margin-bottom: 15px; }
-.feature-box h3 { font-size: 1.4rem; margin-bottom: 10px; }
-.feature-box p { font-size: 0.9rem; color: var(--coffee-light); }
 
-/* Menu Section */
+/* 6. MENU SECTION (Ajustado para não espremer) */
 .menu-section { padding: 80px 8%; }
-.section-title { text-align: center; font-size: 3rem; margin-bottom: 50px; font-weight: 400; }
+.section-title { text-align: center; font-size: 3rem; margin-bottom: 50px; font-weight: 400; color: var(--coffee-dark); }
 
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
 }
+.menu-item { border-bottom: 1px solid rgba(74, 59, 50, 0.1); padding-bottom: 15px; }
+.item-header { display: flex; justify-content: space-between; align-items: baseline; }
+.price { font-weight: bold; color: var(--coffee-light); }
+.description { font-style: italic; color: var(--coffee-light); font-size: 0.9rem; margin-top: 5px; }
 
-.menu-item { border-bottom: 1px solid rgba(74, 59, 50, 0.1); padding-bottom: 20px; }
-.item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
-.item-header h4 { font-size: 1.5rem; font-weight: 400; }
-.price { font-family: 'Lato', sans-serif; font-weight: bold; color: var(--coffee-light); }
-.description { font-style: italic; color: var(--coffee-light); font-size: 0.95rem; }
+/* 7. LOCALIZAÇÃO */
+.location-section { padding: 80px 0; background: var(--white); }
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.map-container { 
+  border-radius: 10px; overflow: hidden; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.location-info i { color: var(--gold-accent); margin-right: 10px; width: 20px; }
+.location-info h3 { font-size: 2.2rem; margin-bottom: 20px; }
+.location-info p { margin-bottom: 15px; font-size: 1.1rem; }
 
-/* Banner Visual */
-.visual-banner {
-  height: 400px;
-  background: fixed url('../imagens/Coffee and books - Cozy aesthetic.jpg') center/cover;
+/* 8. FOOTER & REDES SOCIAIS GIGANTES */
+footer {
+  background: var(--coffee-dark);
+  color: var(--bg-cream);
+  padding: 80px 8% 40px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.col { flex: 1; min-width: 250px; }
+.col h3 { font-size: 1.6rem; margin-bottom: 20px; color: var(--gold-accent); }
+
+/* Ícones de Redes Sociais */
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 15px;
+}
+.social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  width: 70px; /* Círculo maior */
+  height: 70px; 
+  background: rgba(255,255,255,0.05);
+  color: var(--bg-cream);
+  border-radius: 50%;
+  font-size: 2.2rem; /* Ícone grande */
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.social-icon:hover {
+  background: var(--gold-accent);
+  color: var(--coffee-dark);
+  transform: scale(1.15) translateY(-5px);
 }
 
-.visual-banner::after { content: ''; position: absolute; width: 100%; height: 100%; background: rgba(74, 59, 50, 0.4); }
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 30px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
 
-.banner-text { position: relative; z-index: 2; color: var(--white); text-align: center; padding: 20px; }
-.banner-text h2 { font-size: 2.5rem; font-style: italic; }
-
-/* Footer */
-footer { background: var(--coffee-dark); color: var(--bg-cream); padding: 60px 8% 20px; }
-.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 40px; }
-.col h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--gold-accent); }
-.socials a { color: var(--bg-cream); font-size: 1.5rem; margin-right: 20px; transition: 0.3s; }
-.socials a:hover { color: var(--gold-accent); }
-.copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.6; }
-
-/* Mobile */
+/* 9. MOBILE */
 .menu-icon { display: none; font-size: 1.5rem; cursor: pointer; }
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .menu-icon { display: block; }
-  .hero h1 { font-size: 3rem; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  .location-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.8rem; }
+  .social-icon { width: 60px; height: 60px; font-size: 1.8rem; }
 }

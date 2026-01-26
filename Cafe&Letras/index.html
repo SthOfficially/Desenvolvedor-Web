@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Café & Letras | Pausa para a Alma</title>
+  
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="CSS/style.css" />
+  
   <script src="https://kit.fontawesome.com/f267bbc3d3.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
 
@@ -15,7 +18,7 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#home">Início</a></li>
       <li><a href="#menu">Menu</a></li>
-      <li><a href="#ambiente">Ambiente</a></li>
+      <li><a href="#localizacao">Localização</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <div class="menu-icon" onclick="toggleMenu()">
@@ -54,7 +57,6 @@
     <div class="container">
       <h2 class="section-title">Nossos Clássicos</h2>
       <div class="menu-grid">
-        
         <div class="menu-item">
           <div class="item-header">
             <h4>Cappuccino Italiano</h4>
@@ -62,7 +64,6 @@
           </div>
           <p class="description">Expresso, leite vaporizado e cacau 70%.</p>
         </div>
-
         <div class="menu-item">
           <div class="item-header">
             <h4>Latte Macchiato</h4>
@@ -70,7 +71,6 @@
           </div>
           <p class="description">Leite cremoso manchado com expresso suave.</p>
         </div>
-
         <div class="menu-item">
           <div class="item-header">
             <h4>Bolo Red Velvet</h4>
@@ -78,7 +78,6 @@
           </div>
           <p class="description">Massa aveludada vermelha com cream cheese.</p>
         </div>
-
         <div class="menu-item">
           <div class="item-header">
             <h4>Chá de Hibisco</h4>
@@ -86,14 +85,28 @@
           </div>
           <p class="description">Infusão natural com frutas vermelhas.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="ambiente" class="visual-banner">
-    <div class="banner-text">
-      <h2>"A leitura é para a mente o que o café é para o corpo."</h2>
+  <section id="localizacao" class="location-section">
+    <div class="container">
+      <h2 class="section-title">Venha nos Visitar</h2>
+      <div class="location-grid">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUwLjQiUyA0NsKwMzknMjguOCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <div class="location-info">
+          <h3>Nossa Casa</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Rua da Paz, 45 - Centro Histórico</p>
+          <p><i class="fas fa-clock"></i> Aberto todos os dias: 09h às 20h</p>
+          <p><i class="fas fa-phone"></i> (11) 99999-8888</p>
+          <p><i class="fas fa-envelope"></i> contato@cafeeletras.com.br</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -101,18 +114,18 @@
     <div class="footer-content">
       <div class="col">
         <h3>Café & Letras</h3>
-        <p>Aberto todos os dias: 09h - 20h</p>
+        <p>A harmonia perfeita entre o aroma dos grãos e o cheiro de livro novo.</p>
       </div>
-      <div class="col">
-        <h3>Endereço</h3>
-        <p>Rua da Paz, 45 - Centro Histórico</p>
-      </div>
-      <div class="col socials">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <div class="col socials-col">
+        <h3>Acompanhe-nos</h3>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
     </div>
-    <div class="copyright">© 2026 Café & Letras. Design Minimalista.</div>
+    <div class="copyright">© 2026 Café & Letras. Design Minimalista e Aconchegante.</div>
   </footer>
 
   <script src="JavaScript/script.js"></script>
