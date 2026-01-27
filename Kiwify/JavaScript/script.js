@@ -1,5 +1,5 @@
 // Efeito de Rotação 3D nos Cards
-const cards = document.querySelectorAll('.card-projeto, .card-curso');
+const cards = document.querySelectorAll('.card-projeto, .card-curso, .card-cert');
 
 cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {

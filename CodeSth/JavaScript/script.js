@@ -2,7 +2,8 @@ const btnMobile = document.getElementById('mobile-btn');
 const navMenu = document.getElementById('nav-menu');
 const menuLinks = document.querySelectorAll('.menu a');
 const header = document.querySelector('header');
-const cards = document.querySelectorAll('.card-projeto, .card-curso');
+// Adicionado .card-cert aqui para ganhar o efeito 3D
+const cards = document.querySelectorAll('.card-projeto, .card-curso, .card-cert'); 
 let lastScrollTop = 0;
 
 // 1. Menu Responsivo (Hambúrguer)

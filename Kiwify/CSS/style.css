@@ -239,10 +239,10 @@ footer {
 }
 
 .card-cert {
-    background: var(--cinza-card);
+    background: var(--fundo);
     padding: 20px;
     border-radius: 15px;
-    border: 1px solid #333;
+    border: 1px solid var(--fundo);
     text-align: center;
     transition: 0.4s ease;
 }
@@ -253,8 +253,8 @@ footer {
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 20px;
-    border: 2px solid #333; /* Borda para destacar o certificado */
-    background-color: #fff; /* Fundo branco caso a imagem demore a carregar */
+    border: 2px solid var(--fundo); /* Borda para destacar o certificado */
+    background-color: var(--fundo); /* Fundo branco caso a imagem demore a carregar */
 }
 
 .cert-foto {
@@ -270,12 +270,12 @@ footer {
 }
 
 .card-cert p strong {
-    color: var(--azul-neon);
+    color: var(--principal);
     display: block;
     margin-bottom: 5px;
 }
 .card-cert:hover {
-    border-color: var(--azul-neon);
+    border-color: var(--principal);
     transform: translateY(-10px);
 }
 
@@ -292,5 +292,5 @@ footer {
 
 .card-cert p {
     font-size: 0.9rem;
-    color: #ccc;
+    color: var(--texto);
 }
