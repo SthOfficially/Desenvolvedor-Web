@@ -229,3 +229,68 @@ footer {
     .foto img { width: 250px; height: 250px; }
     .home-content h1 { font-size: 2.2rem; }
 }
+
+/* --- ESTILOS DOS CERTIFICADOS COM IMAGEM --- */
+
+.grid-certificados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-cert {
+    background: var(--cinza-card);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.cert-img-container {
+    width: 100%;
+    height: 220px; 
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #333; /* Borda para destacar o certificado */
+    background-color: #fff; /* Fundo branco caso a imagem demore a carregar */
+}
+
+.cert-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 'contain' garante que o certificado apareça inteiro sem cortes */
+    padding: 5px;
+    transition: 0.5s ease;
+}
+
+.card-cert:hover .cert-foto {
+    transform: scale(1.05);
+}
+
+.card-cert p strong {
+    color: var(--azul-neon);
+    display: block;
+    margin-bottom: 5px;
+}
+.card-cert:hover {
+    border-color: var(--azul-neon);
+    transform: translateY(-10px);
+}
+
+.card-cert:hover .cert-foto {
+    filter: grayscale(0%); /* Volta a cor total no hover */
+    transform: scale(1.1); /* Zoom na foto */
+}
+
+.card-cert h3 {
+    font-size: 1.3rem;
+    color: var(--azul-neon);
+    margin-bottom: 10px;
+}
+
+.card-cert p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
