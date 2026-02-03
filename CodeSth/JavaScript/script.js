@@ -1,8 +1,12 @@
+/* ==========================================================================
+   LÓGICA CODESTH - BLINDAGEM & TECNOLOGIA
+   ========================================================================== */
+
 const btnMobile = document.getElementById('mobile-btn');
 const navMenu = document.getElementById('nav-menu');
 const menuLinks = document.querySelectorAll('.menu a');
 const header = document.querySelector('header');
-// Adicionado .card-cert aqui para ganhar o efeito 3D
+// Seleciona todos os cards para o efeito 3D (Projetos, Cursos e Certificados)
 const cards = document.querySelectorAll('.card-projeto, .card-curso, .card-cert'); 
 let lastScrollTop = 0;
 
@@ -14,11 +18,10 @@ btnMobile.addEventListener('click', () => {
     icon.classList.toggle('fa-times');
 });
 
-// 2. Sumir ao descer / Aparecer ao subir
+// 2. Header Inteligente (Sumir ao descer / Aparecer ao subir)
 window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Só começa a esconder depois de 100px de scroll
     if (scrollTop > lastScrollTop && scrollTop > 100) {
         header.classList.add('header-hidden');
     } else {
@@ -27,7 +30,7 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 }, { passive: true });
 
-// 3. Rotação 3D dos Cards
+// 3. Efeito de Rotação 3D nos Cards (Hacker Style)
 cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -42,11 +45,40 @@ cards.forEach(card => {
     });
 });
 
-// 4. Scroll Suave + Círculo Ativo
+// 4. Scroll Suave + Gerenciamento de Classe Ativa
 menuLinks.forEach(link => {
     link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        
+        // Se for um link interno (#), aplica scroll suave
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Atualiza classe ativa e fecha menu mobile
         menuLinks.forEach(l => l.classList.remove('active'));
         this.classList.add('active');
-        navMenu.classList.remove('active'); // Fecha menu no mobile
+        navMenu.classList.remove('active');
+        
+        // Reseta o ícone do menu mobile
+        const icon = btnMobile.querySelector('i');
+        if(icon) {
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        }
     });
+});
+
+// 5. Proteção de Imagem (Evita cópia direta dos Certificados)
+document.querySelectorAll('.cert-foto').forEach(img => {
+    img.addEventListener('contextmenu', e => e.preventDefault());
+    img.addEventListener('dragstart', e => e.preventDefault());
 });

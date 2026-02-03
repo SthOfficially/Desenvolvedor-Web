@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeSth - Portfólio</title>
+    <title>CodeSth - Segurança & Inteligência Digital</title>
     <link rel="stylesheet" href="CSS/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -17,14 +17,12 @@
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 
     <header id="header">
         <div class="container header-flex">
             <a href="#home" class="logo">
-                <img src="Imagens/Logo.png" alt="Logo">
+                <img src="Imagens/Logo.png" alt="Logo CodeSth">
             </a>
 
             <div class="menu-mobile" id="mobile-btn">
@@ -34,8 +32,9 @@
             <nav class="menu" id="nav-menu">
                 <a href="#home">Início</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#projetos">Projetos</a>
+                <a href="#servicos">Segurança</a>
+                <a href="#solucoes">Soluções Tech</a>
+                <a href="#certificados">Autoridade</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
@@ -44,220 +43,162 @@
     <section id="home">
         <div class="container flex-home">
             <div class="home-content">
-                <h1>Bem-vindo à <span>CodeSth</span></h1>
-                <p><p>Transformo marcas com sites de alta performance, identidades visuais exclusivas e soluções estratégicas em dashboards financeiros e segurança de dados.</p></p>
-                <a href="#contato" class="btn-principal">Fale Comigo</a>
+                <span class="badge-alerta">Proteção Ativa 24/7</span>
+                <h1>Sua Vida Digital sob <span>Blindagem Especializada</span></h1>
+                <p>Especialista em Inteligência de Dados (OSINT), monitoramento de vazamentos e segurança cibernética para pessoas e empresas.</p>
+                <div class="hero-btns">
+                    <a href="#servicos" class="btn-principal">Proteger Meus Dados</a>
+                </div>
             </div>
             <div class="foto">
-                <img src="./Imagens/Stephanie.jpeg" alt="Foto de Stephanie Silva" />
+                <img src="./Imagens/Stephanie.jpeg" alt="Stephanie Silva - CodeSth" />
             </div>
         </div>
     </section>
 
     <section id="sobre">
         <div class="container text-center">
-            <h2 class="titulo-sessao">Sobre Mim</h2>
-            <p>Especialista em soluções digitais e visuais. Meu foco é integrar design e tecnologia para o seu crescimento: desde a criação de sites modernos e identidades visuais, até o controle estratégico através de gráficos financeiros e a proteção rigorosa de dados pessoais e comerciais.</p>
+            <h2 class="titulo-sessao">Sobre a Especialista</h2>
+            <p>Stephanie Silva, técnica em Desenvolvimento de Sistemas com especializações em <strong>Segurança Cibernética (SENAI)</strong> e <strong>LGPD (Senac)</strong>. Na CodeSth, integro tecnologia avançada e inteligência OSINT para garantir a proteção rigorosa de dados pessoais e comerciais.</p>
         </div>
     </section>
 
     <section id="servicos">
         <div class="container">
-            <h2 class="titulo-sessao">Meus Serviços</h2>
+            <h2 class="titulo-sessao">Blindagem & Inteligência</h2>
             <div class="grid-cursos">
                 <div class="card-curso">
-                    <div class="badge">Sites</div>
-                    <h3>Criação de Sites</h3>
-                    <p>Modelos exclusivos para portfólios e landing pages modernos e rápidos.</p>
+                    <div class="badge">OSINT</div>
+                    <i class="fas fa-user-secret icon-neon"></i>
+                    <h3>Investigação Digital</h3>
+                    <p>Levantamento estratégico de dados e pegada digital através de nomes ou documentos para segurança em parcerias.</p>
+                    <a href="https://wa.me/5514991838153?text=Olá!+Quero+saber+mais+sobre+Investigação+Digital." class="btn-mini">Consultar</a>
                 </div>
+
                 <div class="card-curso">
-                    <div class="badge">Análise</div>
-                    <h3>Gráficos Financeiros</h3>
-                    <p>Desenvolvimento de dashboards personalizados no Looker Studio.</p>
+                    <div class="badge">Cyber</div>
+                    <i class="fas fa-database icon-neon"></i>
+                    <h3>Análise de Vazamentos</h3>
+                    <p>Varredura técnica na Deep Web para identificar se suas senhas e CPFs foram expostos em ataques hackers.</p>
+                    <a href="https://wa.me/5514991838153?text=Olá!+Quero+verificar+se+meus+dados+vazaram." class="btn-mini">Verificar</a>
                 </div>
+
                 <div class="card-curso">
                     <div class="badge">Segurança</div>
-                    <h3>Segurança de Dados</h3>
-                    <p>Tratamento de dados com total sigilo e proteção pessoal ou empresarial.</p>
+                    <i class="fas fa-phone-slash icon-neon"></i>
+                    <h3>Blindagem Anti-Golpes</h3>
+                    <p>Bloqueio inteligente de SPAM e proteção contra golpes de engenharia social no WhatsApp e aplicativos bancários.</p>
+                    <a href="https://wa.me/5514991838153?text=Olá!+Preciso+de+ajuda+com+bloqueio+de+ligações." class="btn-mini">Proteger</a>
                 </div>
-               <div class="card-curso">
-                <div class="badge">Design</div>
-                     <h3>Criações e Atualizações</h3>
-                    <p>Criação e atualização de cartões de visita e logos personalizados para sua marca.</p>
+
+                <div class="card-curso">
+                    <div class="badge">Ético</div>
+                    <i class="fas fa-street-view icon-neon"></i>
+                    <h3>Geolocalização Familiar</h3>
+                    <p>Configuração de sistemas de rastreio seguro para proteção de filhos e idosos, com alertas de localização em tempo real.</p>
+                    <a href="https://wa.me/5514991838153?text=Olá!+Quero+saber+mais+sobre+Rastreio+Familiar." class="btn-mini">Saber Mais</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projetos">
+    <section id="solucoes" class="bg-alt">
         <div class="container">
-            <h2 class="titulo-sessao">Meus Projetos</h2>
+            <h2 class="titulo-sessao">Tecnologia & Design</h2>
             <div class="grid-projetos">
                 <div class="card-projeto">
-                    <div class="badge">Site</div>
-                    <h3>Black Elétrica</h3>
-                    <p class="sobre-projeto">Landing page profissional para serviços elétricos residenciais e comerciais, contato direto para orçamentos rápidos.</p>
-                    <a href="https://sthofficially.github.io/Desenvolvedor-Web/BlackEletrica/" target="_blank" class="btn-link">Ver Detalhes</a>
+                    <i class="fas fa-code icon-neon-sm"></i>
+                    <h3>Criação de Sites</h3>
+                    <p>Landing pages e portfólios modernos e seguros.</p>
                 </div>
-
                 <div class="card-projeto">
-                    <div class="badge">Site</div>
-                    <h3>Café & Letras</h3>
-                    <p class="sobre-projeto">Landing page que prioriza o cardápio e a identidade visual.</p>
-                    <a href="https://sthofficially.github.io/Desenvolvedor-Web/Cafe&Letras/" target="_blank" class="btn-link">Ver Detalhes</a>
+                    <i class="fas fa-chart-pie icon-neon-sm"></i>
+                    <h3>Dashboards Financeiros</h3>
+                    <p>Análise de dados estratégicos no Looker Studio.</p>
                 </div>
-
-                   <div class="card-projeto">
-                    <div class="badge">Site</div>
-                    <h3>Açai & Alegria</h3>
-                    <p class="sobre-projeto">Landing page que prioriza o cardápio e a identidade visual.</p>
-                    <a href="https://sthofficially.github.io/Desenvolvedor-Web/A%C3%A7ai&Alegria/" target="_blank" class="btn-link">Ver Detalhes</a>
-                </div>
-
                 <div class="card-projeto">
-                    <div class="badge">Gráfico Looker Studio</div>
-                    <h3>Sorveteria</h3>
-                    <p class="sobre-projeto">Dashboard financeiro para monitoramento de lucro em tempo real.</p>
-                    <a href="https://lookerstudio.google.com/reporting/cb9671e2-1fc4-4619-bc3f-0727c03d2c40" target="_blank" class="btn-link">Acessar Painel</a>
+                    <i class="fas fa-pen-nib icon-neon-sm"></i>
+                    <h3>Design & Identidade</h3>
+                    <p>Criação e atualização de logos e cartões de visita.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cursos">
-    <div class="container text-center">
-      <h2 class="titulo-sessao">Cursos com Certificado</h2>
-      <div class="grid-cursos">
-          <a href="https://sthofficially.github.io/Desenvolvedor-Web/Kiwify/" target="_blank" class="btn-principal">Conhecer Cursos</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="certificados">
-    <div class="container">
-        <h2 class="titulo-sessao">Certificações</h2>
-        
-        <div class="grid-certificados">
-            <div class="card-cert">
-                <div class="cert-img-container">
-                    <img src="Imagens/Tércnico em Desenvolvimento de Sistemas.jpg" alt="Diploma Técnico ETEC" class="cert-foto">
-                </div>
-                <h3>Técnico em Desenvolvimento de Sistemas</h3>
-                <p><strong>Centro Paula Souza (ETEC)</strong></p>
-                <p>Habilitação profissional focada no Eixo Tecnológico de Informação e Comunicação.</p>
-            </div>
-
-            <div class="card-cert">
-                <div class="cert-img-container">
-                    <img src="Imagens/Certificado - Cibernéticos.jpg" alt="Certificado Incidentes Cibernéticos SENAI" class="cert-foto">
-                </div>
-                <h3>Incidentes Cibernéticos</h3>
-                <p><strong>Escola SENAI "Luiz Massa"</strong></p>
-                <p>Capacitação técnica voltada para a Prevenção e Reação aos Incidentes Cibernéticos.</p>
-            </div>
-        </div>
-    </div>
-</section>
-  
-    <section id="contato">
-        <div class="container contato-container">
-            <h2 class="titulo-sessao">Contato</h2>
-            <p>Do código ao design, da segurança ao financeiro: soluções completas para uma estrutura digital impecável.</p>
-            <div class="botoes-contato-flex">
-                <a href="mailto:stephanie.gcsilva@outlook.com.br" class="btn-redes" title="E-mail">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.instagram.com/_code.sth_/" target="_blank" class="btn-redes" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
+    <section id="certificados">
         <div class="container">
-            <p>© 2025 CodeSth – Todos os direitos reservados.</p>
+            <h2 class="titulo-sessao">Autoridade & Certificações</h2>
+            <div class="grid-certificados">
+                <div class="card-cert">
+                    <div class="cert-img-container black-bg">
+                        <img src="Imagens/Tércnico em Desenvolvimento de Sistemas.jpg" alt="ETEC" class="cert-foto">
+                    </div>
+                    <h3>Desenvolvimento de Sistemas</h3>
+                    <p><strong>ETEC - Centro Paula Souza</strong></p>
+                </div>
+                <div class="card-cert">
+                    <div class="cert-img-container black-bg">
+                        <img src="Imagens/Certificado - Cibernéticos.jpg" alt="SENAI" class="cert-foto">
+                    </div>
+                    <h3>Incidentes Cibernéticos</h3>
+                    <p><strong>SENAI "Luiz Massa"</strong></p>
+                </div>
+                <div class="card-cert">
+                    <div class="cert-img-container black-bg">
+                        <img src="Imagens/Certificado - LGPD.jpg" alt="SENAC" class="cert-foto">
+                    </div>
+                    <h3>Privacidade e LGPD</h3>
+                    <p><strong>SENAC Botucatu</strong></p>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section id="contato">
+        <div class="container text-center">
+            <h2 class="titulo-sessao">Fale com a Especialista</h2>
+            <p>Do código à blindagem: soluções completas para sua segurança digital.</p>
+            <div class="botoes-contato-flex">
+                <a href="mailto:stephanie.gcsilva@outlook.com.br" class="btn-redes"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.instagram.com/_code.sth_/" target="_blank" class="btn-redes"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="container footer-center">
+        <p>© 2026 CodeSth Security – Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <a href="https://wa.me/5514991838153?text=EMERGÊNCIA+DIGITAL:+Preciso+de+ajuda+agora!" class="btn-emergencia-float" target="_blank">
+        <div class="pulsar-onda"></div>
+        <i class="fas fa-biohazard"></i>
+        <span>S.O.S Segurança</span>
+    </a>
 
     <a href="https://wa.me/5514991838153" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
+        // Menu Mobile
         const btnMobile = document.getElementById('mobile-btn');
         const navMenu = document.getElementById('nav-menu');
-        const menuLinks = document.querySelectorAll('.menu a');
-        const header = document.getElementById('header');
-        const cards = document.querySelectorAll('.card-projeto, .card-curso');
-        let lastScrollTop = 0;
-
-        // 1. Abrir/Fechar Menu Mobile
         btnMobile.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            const icon = btnMobile.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
+            btnMobile.querySelector('i').classList.toggle('fa-bars');
+            btnMobile.querySelector('i').classList.toggle('fa-times');
         });
 
-        // 2. Lógica de Scroll (Sumir menu + Círculo ativo dinâmico)
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            // Fazer o menu sumir ao descer
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                header.classList.add('header-hidden');
-            } else {
-                header.classList.remove('header-hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-
-            // Mover o círculo conforme a seção na tela
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop - 150;
-                const sectionHeight = section.offsetHeight;
-                if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
-                    menuLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${section.id}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }, { passive: true });
-
-        // 3. Efeito 3D nos Cards
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const rotateX = (y - rect.height / 2) / 10;
-                const rotateY = (x - rect.width / 2) / -10;
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
-            });
-        });
-
-        // 4. Clique Suave e fechar menu mobile
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+        // Scroll Suave
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
                 navMenu.classList.remove('active');
-                btnMobile.querySelector('i').className = 'fas fa-bars';
-
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70,
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
-</body>
+</body> 
 </html>
