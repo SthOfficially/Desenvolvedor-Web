@@ -282,3 +282,67 @@ footer p {
     letter-spacing: 1px;
     margin: 0; /* Remove margens padrão que podem desalinhá-lo */
 }
+
+/* Centralização da seção Sobre */
+.sobre-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center;
+    text-align: center; /* Alinha o texto no meio */
+}
+
+.texto-destaque-centro {
+    font-size: 1.2rem;
+    color: var(--texto-secundario);
+    max-width: 800px; /* Impede que o texto fique largo demais */
+    line-height: 1.8;
+    margin: 0 auto; /* Garante a centralização na página */
+}
+
+/* Destaque para palavras em strong (CodeSth e OSINT) */
+.texto-destaque-centro strong {
+    color: var(--principal);
+    font-weight: 600;
+}
+
+/* Seção do Portal de Cursos */
+#cursos-portal {
+    padding: 100px 0;
+    text-align: center;
+    background: #050505; /* Fundo sutilmente diferente */
+}
+
+.portal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitulo-cursos {
+    color: var(--texto-secundario);
+    margin-bottom: 40px;
+    max-width: 600px;
+    font-size: 1.1rem;
+}
+
+/* Estilo Especial para o Botão do Portal */
+.portal-btn {
+    padding: 20px 50px !important; /* Maior que os outros botões */
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o ícone e o texto */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+.portal-btn i {
+    font-size: 1.4rem;
+}
+
+.portal-btn:hover {
+    box-shadow: 0 0 30px var(--principal);
+    transform: translateY(-5px) scale(1.05);
+}
