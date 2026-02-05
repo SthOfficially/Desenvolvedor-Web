@@ -3,38 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeSth - Blindagem Digital</title>
+    <title>CodeSth - Blindagem Digital & Tech</title>
     <link rel="stylesheet" href="CSS/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
+    <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 
     <header id="header">
         <div class="container header-flex">
-            <a href="#home" class="logo">
-                <img src="Imagens/Logo.png" alt="Logo CodeSth">
-            </a>
-
-            <div class="menu-mobile" id="mobile-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-
+            <a href="#home" class="logo"><img src="Imagens/Logo.png" alt="Logo CodeSth"></a>
+            <div class="menu-mobile" id="mobile-btn"><i class="fas fa-bars"></i></div>
             <nav class="menu" id="nav-menu">
                 <a href="#home">Início</a>
-                <a href="#sobre">Sobre</a>
                 <a href="#servicos">Segurança</a>
-                <a href="#solucoes">Soluções Tech</a>
-                <a href="#certificados">Autoridade</a>
+                <a href="#solucoes-tech">Desenvolvimento</a>
+                <a href="#portfolio-projetos">Modelos</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
@@ -45,126 +33,122 @@
             <div class="home-content">
                 <span class="badge-alerta">Proteção Ativa 24/7</span>
                 <h1>Sua Vida Digital sob <span>Blindagem Especializada</span></h1>
-                <p>Especialista em Inteligência de Dados (OSINT), monitoramento de vazamentos e segurança cibernética para pessoas e empresas.</p>
-                <div class="hero-btns">
-                    <a href="#servicos" class="btn-principal">Proteger Meus Dados</a>
-                </div>
+                <p>Especialista em Inteligência de Dados (OSINT) e Desenvolvimento de Soluções de Alta Performance.</p>
+                <a href="#servicos" class="btn-principal">Proteger Meus Dados</a>
             </div>
-            <div class="foto">
-                <img src="./Imagens/Stephanie.jpeg" alt="Stephanie Silva - CodeSth" />
-            </div>
+            <div class="foto"><img src="./Imagens/Stephanie.jpeg" alt="Stephanie Silva" /></div>
         </div>
-    </section>
-
-    <section id="sobre">
-        <div class="container text-center">
-            <h2 class="titulo-sessao">Sobre a Especialista</h2>
-            <p class="texto-destaque-centro">
-            Na <strong>CodeSth</strong>, integro tecnologia avançada e inteligência <strong>OSINT</strong> para garantir a proteção rigorosa de dados pessoais e comerciais.
-        </p>        </div>
     </section>
 
     <section id="servicos">
         <div class="container">
             <h2 class="titulo-sessao">Blindagem Digital</h2>
-            <div class="grid-cursos">
-                <div class="card-curso">
+            <div class="grid-layout">
+                <div class="card-item">
                     <div class="badge">OSINT</div>
-                    <i class="fas fa-user-secret icon-neon"></i>
-                    <h3>Investigação Digital</h3>
-                    <p>Levantamento estratégico de dados e pegada digital através de nomes ou documentos para segurança em parcerias.</p>
-                    <a href="https://wa.me/5514991838153?text=Olá!+Quero+saber+mais+sobre+Investigação+Digital." class="btn-mini">Consultar</a>
+                    <i class="fas fa-search-plus icon-neon"></i>
+                    <h3>Investigação & Apoio</h3>
+                    <p>Identificação de perfis e localização de dados para resolver fraudes e problemas pessoais.</p>
                 </div>
-
-                <div class="card-curso">
-                    <div class="badge">Cyber</div>
+                <div class="card-item">
+                    <div class="badge">Deep Web</div>
                     <i class="fas fa-database icon-neon"></i>
                     <h3>Análise de Vazamentos</h3>
-                    <p>Varredura técnica na Deep Web para identificar se seus dados pessoais ou comerciais foram expostos em ataques hackers.</p>
-                    <a href="https://wa.me/5514991838153?text=Olá!+Quero+verificar+se+meus+dados+vazaram." class="btn-mini">Verificar</a>
+                    <p>Varredura técnica para checar se seus dados foram expostos por hackers.</p>
                 </div>
-
-                <div class="card-curso">
-                    <div class="badge">Segurança</div>
+                <div class="card-item">
+                    <div class="badge">Anti-Golpe</div>
                     <i class="fas fa-phone-slash icon-neon"></i>
-                    <h3>Blindagem Anti-Golpes</h3>
-                    <p>Bloqueio inteligente de SPAM e proteção contra golpes de engenharia social no WhatsApp e aplicativos bancários.</p>
-                    <a href="https://wa.me/5514991838153?text=Olá!+Preciso+de+ajuda+com+bloqueio+de+ligações." class="btn-mini">Proteger</a>
-                </div>
-
-                <div class="card-curso">
-                    <div class="badge">Ético</div>
-                    <i class="fas fa-street-view icon-neon"></i>
-                    <h3>Geolocalização Familiar</h3>
-                    <p>Configuração de sistemas de rastreio seguro para proteção da familiar, com alertas de localização em tempo real.</p>
-                    <a href="https://wa.me/5514991838153?text=Olá!+Quero+saber+mais+sobre+Rastreio+Familiar." class="btn-mini">Saber Mais</a>
+                    <h3>Proteção Anti-Fraude</h3>
+                    <p>Blindagem de WhatsApp e apps bancários contra engenharia social.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="solucoes" class="bg-alt">
+    <section id="solucoes-tech" style="background: #050505;">
         <div class="container">
             <h2 class="titulo-sessao">Tecnologia & Design</h2>
-            <div class="grid-projetos">
-                <div class="card-projeto">
-                    <i class="fas fa-code icon-neon-sm"></i>
+            <div class="grid-layout">
+                <div class="card-item">
+                    <div class="badge">Web</div>
+                    <i class="fas fa-code icon-neon"></i>
                     <h3>Criação de Sites</h3>
-                    <p>Landing pages e portfólios modernos e seguros.</p>
+                    <p>Desenvolvimento de Landing Pages e Portfólios modernos, rápidos e seguros.</p>
                 </div>
-                <div class="card-projeto">
-                    <i class="fas fa-chart-pie icon-neon-sm"></i>
+                <div class="card-item">
+                    <div class="badge">BI</div>
+                    <i class="fas fa-chart-pie icon-neon"></i>
                     <h3>Dashboards Financeiros</h3>
-                    <p>Análise de dados estratégicos no Looker Studio.</p>
+                    <p>Análise de dados estratégicos no Looker Studio para controle de lucros.</p>
                 </div>
-                <div class="card-projeto">
-                    <i class="fas fa-pen-nib icon-neon-sm"></i>
+                <div class="card-item">
+                    <div class="badge">Brand</div>
+                    <i class="fas fa-pen-nib icon-neon"></i>
                     <h3>Design & Identidade</h3>
-                    <p>Criação e atualização de logos e cartões de visita.</p>
+                    <p>Criação de logo e cartão de visita personalizados para consolidar a presença profissional da sua marca.</p>
+                </div>
+            </div>
+            <div class="container-btn-unico">
+            <a href="https://wa.me/5514991838153?text=Olá!+Vi+suas+soluções+de+Tecnologia+e+Design+e+quero+um+orçamento." class="btn-me-chama-unico">
+                <i class="fab fa-whatsapp"></i> Me Chama no WhatsApp
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <section id="portfolio-projetos">
+        <div class="container">
+            <h2 class="titulo-sessao">Modelos de Sucesso</h2>
+            <div class="grid-layout">
+                <div class="card-item">
+                    <div class="badge">Site</div>
+                    <i class="fas fa-ice-cream icon-neon-sm"></i>
+                    <h3>Açaí & Alegria</h3>
+                    <p>Cardápio digital com seleção de tamanhos de copos e lista de sabores e adicionais.</p>
+                    <a href="https://sthofficially.github.io/Desenvolvedor-Web/Açai&Alegria/" target="_blank" class="btn-link">Ver Site</a>
+                </div>
+                <div class="card-item">
+                    <div class="badge">Site</div>
+                    <i class="fas fa-bolt icon-neon-sm"></i>
+                    <h3>Black Elétrica</h3>
+                    <p>Página de alta conversão para serviços de manutenção elétrica.</p>
+                    <a href="https://sthofficially.github.io/Desenvolvedor-Web/BlackEletrica/" target="_blank" class="btn-link">Ver Site</a>
+                </div>
+                <div class="card-item">
+             <div class="badge">Site</div>
+                <i class="fas fa-coffee icon-neon-sm"></i>
+                 <h3>Café & Letras</h3>
+                <p>Onde o aroma encontra a história. Landing page sofisticada para cafeterias e livrarias, com foco em ambiente acolhedor e menu clássico.</p>
+                 <a href="https://sthofficially.github.io/Desenvolvedor-Web/Cafe&Letras/" target="_blank" class="btn-link">Ver Site</a>
+             </div>
+                <div class="card-item">
+                    <div class="badge">BI</div>
+                    <i class="fas fa-chart-line icon-neon-sm"></i>
+                    <h3>Gestão de Vendas</h3>
+                    <p>Dashboard de controle financeiro estratégico para sorveterias: acompanhe faturamento, produtos mais vendidos e fluxo de caixa.</p>
+                    <a href="https://lookerstudio.google.com/reporting/cb9671e2-1fc4-4619-bc3f-0727c03d2c40" target="_blank" class="btn-link">Ver Dados</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cursos-portal">
-    <div class="container portal-container">
-        <h2 class="titulo-sessao">Especialização & Treinamentos</h2>
-        <p class="subtitulo-cursos">Acesse minha plataforma exclusiva e domine as técnicas de Segurança de Dados.</p>
-        
-        <div class="cta-cursos">
-            <a href="https://sthofficially.github.io/Desenvolvedor-Web/Kiwify/" target="_blank" class="btn-principal portal-btn">
-                <i class="fas fa-graduation-cap"></i>Cursos
-            </a>
-        </div>
+    <section id="meus-cursos">
+    <div class="container text-center">
+        <h2 class="titulo-sessao">Educação & Blindagem</h2>
+        <p style="color: var(--texto-secundario); margin-bottom: 25px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Conheça minha trajetória acadêmica, certificações profissionais e acesse meus 
+            cursos exclusivos com dicas de segurança.
+        </p>
+        <a href="https://sthofficially.github.io/Desenvolvedor-Web/Kiwify/" target="_blank" class="btn-cursos-externo">
+            <i class="fas fa-user-shield"></i> Acessar Cursos e Certificações
+        </a>
     </div>
 </section>
 
-    <section id="certificados">
-        <div class="container">
-            <h2 class="titulo-sessao">Certificações</h2>
-            <div class="grid-certificados">
-                <div class="card-cert">
-                    <div class="cert-img-container black-bg">
-                        <img src="Imagens/Tércnico em Desenvolvimento de Sistemas.jpg" alt="ETEC" class="cert-foto">
-                    </div>
-                    <h3>Desenvolvimento de Sistemas</h3>
-                    <p><strong>ETEC - Centro Paula Souza</strong></p>
-                </div>
-                <div class="card-cert">
-                    <div class="cert-img-container black-bg">
-                        <img src="Imagens/Certificado - Cibernéticos.jpg" alt="SENAI" class="cert-foto">
-                    </div>
-                    <h3>Incidentes Cibernéticos</h3>
-                    <p><strong>SENAI "Luiz Massa"</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="contato">
         <div class="container text-center">
-            <h2 class="titulo-sessao">Fale com a Especialista</h2>
-            <p>Do código à blindagem: soluções completas para sua segurança digital.</p>
+            <h2 class="titulo-sessao">Fale com a CodeSth</h2>
             <div class="botoes-contato-flex">
                 <a href="mailto:stephanie.gcsilva@outlook.com.br" class="btn-redes"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.instagram.com/_code.sth_/" target="_blank" class="btn-redes"><i class="fab fa-instagram"></i></a>
@@ -172,40 +156,17 @@
         </div>
     </section>
 
-<footer>
-    <div class="container footer-center">
-        <p>© 2026 CodeSth – Todos os direitos reservados.</p>
-    </div>
-</footer>
+    <footer><p>© 2026 CodeSth – Segurança e Tecnologia.</p></footer>
 
-    <a href="https://wa.me/5514991838153?text=EMERGÊNCIA+DIGITAL:+Preciso+de+ajuda+agora!" class="btn-emergencia-float" target="_blank">
-        <div class="pulsar-onda"></div>
-        <i class="fas fa-biohazard"></i>
-        <span>S.O.S Segurança</span>
-    </a>
-
-    <a href="https://wa.me/5514991838153" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+   <a href="https://wa.me/5514991838153?text=EMERGÊNCIA+DIGITAL:+Preciso+de+ajuda+agora!" class="btn-emergencia-principal" target="_blank">
+    <i class="fas fa-exclamation-triangle"></i>
+    <span class="tooltip-emergencia">Emergência 24h</span>
+</a>
 
     <script>
-        // Menu Mobile
         const btnMobile = document.getElementById('mobile-btn');
         const navMenu = document.getElementById('nav-menu');
-        btnMobile.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            btnMobile.querySelector('i').classList.toggle('fa-bars');
-            btnMobile.querySelector('i').classList.toggle('fa-times');
-        });
-
-        // Scroll Suave
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                navMenu.classList.remove('active');
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
+        btnMobile.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     </script>
-</body> 
+</body>
 </html>
