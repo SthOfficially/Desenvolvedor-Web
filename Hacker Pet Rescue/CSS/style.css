@@ -1,0 +1,175 @@
+/* ==========================================================
+   CONFIGURAÇÕES GERAIS - ESTILO HACKER HARDCORE
+   ========================================================== */
+:root {
+    --principal: #32e7de;      /* Ciano Cyber */
+    --alerta: #ff007a;         /* Rosa Neon */
+    --fundo-dark: #020205;     /* Quase Preto */
+    --texto: #e0fdfb;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    cursor: crosshair; /* Mira de hacker */
+}
+
+body {
+    background-color: var(--fundo-dark);
+    color: var(--texto);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Mantém tudo travado na tela */
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================
+   FUNDO - EFEITO SCANLINE & DATA STREAM
+   ========================================================== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Efeito de linhas horizontais (Scanlines) */
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 10;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Gradiente radial centralizado */
+    background: radial-gradient(circle at center, transparent 0%, var(--fundo-dark) 90%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Fundo Animado de Grade Digital */
+.background-animate {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(50, 231, 222, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(50, 231, 222, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -1;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    from { background-position: 0 0; }
+    to { background-position: 0 1000px; }
+}
+
+/* ==========================================================
+   HUD (INTERFACE DE JOGO)
+   ========================================================== */
+#hud {
+    position: fixed; top: 0; width: 100%; padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--alerta);
+    display: flex; justify-content: space-between;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(255, 0, 122, 0.3);
+}
+
+#timer { color: var(--alerta); text-shadow: 0 0 10px var(--alerta); }
+
+/* ==========================================================
+   CONTEÚDO CENTRALIZADO
+   ========================================================== */
+#game-canvas {
+    flex: 1;                /* Ocupa o resto da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin-top: 60px;       /* Espaço do HUD */
+}
+
+.glitch {
+    font-family: 'Orbitron';
+    font-size: 3rem;
+    color: var(--principal);
+    text-shadow: 2px 2px var(--alerta);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================
+   PETS COLETÁVEIS - DIFICULDADE MÁXIMA
+   ========================================================== */
+.pet-runner {
+    position: absolute;
+    font-size: 3rem; /* Tamanho bom para ver e clicar */
+    z-index: 100;
+    filter: drop-shadow(0 0 10px var(--principal));
+    transition: all 0.3s ease-out; /* Movimento rápido */
+    user-select: none;
+    animation: jitter 0.3s infinite alternate;
+}
+
+@keyframes jitter {
+    0% { transform: translate(0,0) rotate(0deg); }
+    100% { transform: translate(5px, 5px) rotate(10deg); }
+}
+
+.captured { display: none; }
+
+/* ==========================================================
+   MODAL DE FINALIZAÇÃO (TAMBÉM CENTRALIZADO)
+   ========================================================== */
+#game-modal {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.98);
+    display: none; align-items: center; justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    border: 2px solid var(--principal);
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+    background: #000;
+    box-shadow: 0 0 40px rgba(50, 231, 222, 0.2);
+}
+
+button {
+    background: var(--principal);
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Orbitron';
+    font-weight: bold;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: var(--alerta);
+    color: #fff;
+    box-shadow: 0 0 20px var(--alerta);
+}

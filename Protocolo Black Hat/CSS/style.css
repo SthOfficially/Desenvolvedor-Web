@@ -1,0 +1,29 @@
+:root { --green: #00ff41; --gold: #ffd700; --blue: #00d9ff; --yellow: #ffff00; }
+body { background: #000; color: var(--green); font-family: 'Courier New', monospace; margin: 0; height: 100vh; overflow: hidden; }
+
+.crt-overlay { position: fixed; inset: 0; pointer-events: none; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%); background-size: 100% 3px; z-index: 10; }
+.main-interface { display: flex; flex-direction: column; height: 100vh; padding: 10px; box-sizing: border-box; }
+.top-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px; border: 1px solid var(--green); }
+.xp-bar { width: 100px; height: 10px; border: 1px solid var(--green); background: #000; }
+#xp-fill { height: 100%; width: 5%; background: var(--green); transition: 0.5s; }
+
+.terminal-container { flex: 1; padding: 20px; display: flex; flex-direction: column; border: 1px solid var(--green); margin-top: 10px; background: rgba(0,5,0,0.9); }
+#terminal-output { flex: 1; overflow-y: auto; font-size: 0.9rem; }
+.input-line { display: flex; gap: 10px; border-top: 1px solid #003300; padding-top: 10px; }
+#cmd-input { background: transparent; border: none; color: #fff; outline: none; flex: 1; font-family: inherit; }
+
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal-content { border: 2px solid var(--blue); padding: 30px; text-align: center; max-width: 350px; background: #000; }
+.grid-numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+.num-btn { background: #001111; border: 1px solid var(--blue); color: var(--blue); padding: 15px; cursor: pointer; }
+.num-btn.active { background: var(--blue); color: #000; font-weight: bold; }
+
+.btn-main { background: var(--green); color: #000; border: none; padding: 12px; cursor: pointer; font-weight: bold; width: 100%; }
+.btn-sub { background: #333; color: #fff; border: none; padding: 8px; cursor: pointer; width: 100%; margin-top: 5px; }
+.btn-portal { background: var(--gold); color: #000; border: none; padding: 15px; width: 100%; font-weight: bold; cursor: pointer; }
+
+.hidden { display: none !important; }
+.yellow { color: var(--yellow); }
+.white { color: #fff; }
+.gold { color: var(--gold); }
+.warning { color: #ff3333; font-weight: bold; margin-bottom: 15px; }
