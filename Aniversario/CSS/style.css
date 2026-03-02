@@ -1,0 +1,85 @@
+body {
+    background-color: #f8bbd0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+}
+
+.card { text-align: center; z-index: 10; }
+
+/* BOLO */
+.cake-container {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: 0 auto 30px;
+}
+
+.layer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bottom-layer { width: 160px; height: 40px; bottom: 0; background: #e1b1b1; }
+.middle-layer { width: 120px; height: 35px; bottom: 40px; background: #ffffff; }
+.top-layer { width: 80px; height: 30px; bottom: 75px; background: #f48fb1; }
+
+.hidden-slice { opacity: 0; transform: translateX(-50%) translateY(-100px); }
+
+/* Animação de cair */
+.drop-animation {
+    animation: dropSlice 0.8s ease-out forwards;
+}
+
+@keyframes dropSlice {
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* VELA */
+.candle {
+    position: absolute;
+    width: 8px; height: 30px; background: #fff;
+    top: 20px; left: 50%; transform: translateX(-50%);
+    opacity: 0; transition: 0.5s;
+}
+
+.flame {
+    position: absolute; top: -15px; left: 0;
+    width: 8px; height: 12px; background: #ffeb3b;
+    border-radius: 50%; box-shadow: 0 0 15px #ffeb3b;
+    animation: flicker 0.5s infinite alternate;
+}
+
+/* BOTÃO */
+.play-btn {
+    background-color: #c2185b; color: white; border: none;
+    border-radius: 50%; width: 60px; height: 60px;
+    cursor: pointer; font-size: 20px; transition: 0.3s;
+}
+
+.play-btn.hide { display: none; }
+
+/* TEXTO */
+.Happy_Birthday {
+    color: #c2185b; font-size: 2.5em; font-weight: bold;
+    margin-top: 20px; white-space: nowrap; overflow: hidden;
+    border-right: 3px solid #c2185b; width: 0;
+}
+
+.typing-animation {
+    animation: typing 3s steps(20) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
+@keyframes flicker { from { opacity: 0.8; } to { opacity: 1; } }
+
+.confetti { position: absolute; border-radius: 50%; animation: fall linear forwards; }
+@keyframes fall { to { transform: translateY(110vh); } }
