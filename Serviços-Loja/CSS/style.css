@@ -19,7 +19,7 @@
 
 body {
     background-color: var(--fundo);
-    /* FUNDO DE GRADE DIGITAL (ESTILO PROGRAMADOR) */
+    /* FUNDO DE GRADE DIGITAL */
     background-image: 
         linear-gradient(rgba(50, 231, 222, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(50, 231, 222, 0.05) 1px, transparent 1px);
@@ -31,7 +31,7 @@ body {
 }
 
 /* ==========================================================================
-   2. SEÇÕES
+   2. SEÇÕES & CONTAINER
    ========================================================================== */
 section { 
     padding: 80px 0; 
@@ -75,17 +75,6 @@ header {
     justify-content: space-between; 
     align-items: center; 
 }
-
-/* Estilo para Logo em texto se não usar imagem */
-.logo {
-    font-family: 'Orbitron', sans-serif;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.logo span { color: var(--principal); }
 
 .logo img { height: 40px; }
 
@@ -147,21 +136,19 @@ header {
 .foto img { 
     width: 350px; 
     height: 350px; 
-    border-radius: 30px; /* Borda levemente arredondada para ar moderno */
+    border-radius: 30px; 
     border: 3px solid var(--principal); 
     object-fit: cover; 
     box-shadow: 0 0 30px rgba(50, 231, 222, 0.2);
     transition: 0.5s;
 }
 
-.foto img:hover { transform: scale(1.03); }
-
 /* ==========================================================================
-   5. GRID & CARDS
+   5. GRID & CARDS (FORÇANDO 3 COLUNAS)
    ========================================================================== */
 .grid-layout { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 25px; 
 }
 
@@ -171,7 +158,6 @@ header {
     border-radius: 12px;
     border: 1px solid #1a1a1a;
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,27 +165,25 @@ header {
     justify-content: flex-start;
     min-height: 250px;
     position: relative;
-    overflow: hidden;
-}
-
-.card-item p {
-    color: var(--texto-secundario);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: auto;
-    padding: 10px 0;
-}
-
-.card-item h3 {
-    margin-bottom: 15px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
 }
 
 .card-item:hover { 
     border-color: var(--principal); 
     transform: translateY(-10px); 
     box-shadow: 0 10px 25px rgba(50, 231, 222, 0.15);
+}
+
+.card-item h3 {
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+}
+
+.card-item p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: auto;
 }
 
 .icon-neon { 
@@ -210,19 +194,16 @@ header {
     text-shadow: 0 0 10px rgba(50, 231, 222, 0.5);
 }
 
-.icon-neon-sm { font-size: 2.2rem; color: var(--principal); margin-bottom: 10px; }
-
 .badge { 
     position: absolute; 
     top: 10px; 
     right: 10px; 
     background: var(--principal); 
     color: #000; 
-    font-size: 0.65rem; 
-    padding: 3px 10px; 
+    font-size: 0.6rem; 
+    padding: 3px 8px; 
     border-radius: 4px; 
     font-weight: bold; 
-    text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -238,10 +219,7 @@ header {
     display: inline-block; 
     transition: 0.3s;
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem;
 }
-
-.btn-principal:hover { box-shadow: 0 0 20px var(--principal); transform: scale(1.05); }
 
 .btn-link { 
     color: var(--principal); 
@@ -256,9 +234,8 @@ header {
     transition: 0.3s;
 }
 
-.btn-link:hover { background: var(--principal); color: #000; box-shadow: 0 0 10px var(--principal); }
+.btn-link:hover { background: var(--principal); color: #000; }
 
-/* BOTÃO ÚNICO EM TECNOLOGIA */
 .container-btn-unico {
     display: flex;
     justify-content: center;
@@ -279,17 +256,10 @@ header {
     align-items: center;
     gap: 12px;
     transition: 0.3s;
-    letter-spacing: 1px;
-}
-
-.btn-me-chama-unico:hover {
-    background: var(--principal);
-    color: #000;
-    box-shadow: 0 0 20px var(--principal);
 }
 
 /* ==========================================================================
-   7. BOTÃO DE HUB DE LINKS (ANTIGO EMERGÊNCIA)
+   7. BOTÃO WHATSAPP / EMERGÊNCIA
    ========================================================================== */
 .btn-emergencia-principal {
     position: fixed;
@@ -322,40 +292,42 @@ header {
     white-space: nowrap;
     opacity: 0;
     transition: 0.3s;
-    pointer-events: none;
 }
 
 .btn-emergencia-principal:hover .tooltip-emergencia { opacity: 1; }
 
 @keyframes pulsar-principal {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(50, 231, 222, 0.6); }
-    70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(50, 231, 222, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(50, 231, 222, 0); }
+    0% { transform: scale(1); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(50, 231, 222, 0); }
+    100% { transform: scale(1); }
 }
 
 /* ==========================================================================
-   8. CONTATO & FOOTER
+   8. CONTATO & REDES
    ========================================================================== */
 #contato { padding: 80px 0; background: #050505; }
-.botoes-contato-flex { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
+.botoes-contato-flex { display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
 .btn-redes i { font-size: 2.5rem; color: var(--principal); transition: 0.3s; }
-.btn-redes:hover i { color: #fff; transform: scale(1.25); text-shadow: 0 0 15px var(--principal); }
+.btn-redes:hover i { color: #fff; transform: scale(1.2); }
 
 footer { 
     padding: 50px; 
     text-align: center; 
     background: #000; 
-    border-top: 1px solid #111; 
     color: #666; 
     font-size: 0.8rem;
-    letter-spacing: 1px;
 }
 
 /* ==========================================================================
-   9. MOBILE (RESPONSIVIDADE)
+   9. RESPONSIVIDADE (MOBILE)
    ========================================================================== */
+@media (max-width: 1024px) {
+    .grid-layout { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
     .flex-home { flex-direction: column-reverse; text-align: center; }
+    .grid-layout { grid-template-columns: 1fr; }
     .home-content h1 { font-size: 2.2rem; }
     .foto img { width: 280px; height: 280px; }
     
@@ -367,57 +339,14 @@ footer {
         width: 100%; 
         background: rgba(0,0,0,0.98); 
         flex-direction: column; 
-        padding: 30px; 
-        text-align: center;
-        border-bottom: 2px solid var(--principal);
+        padding: 20px;
     }
-    
     .menu.active { display: flex; }
-    .menu a { margin: 15px 0; font-size: 1rem; }
     .menu-mobile { display: block; }
 }
 
 /* ==========================================================================
-   10. BOTÃO DE CURSOS
+   10. WIDGET COLAB55
    ========================================================================== */
-.btn-cursos-externo {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    background: rgba(50, 231, 222, 0.05);
-    color: var(--principal);
-    border: 2px solid var(--principal);
-    padding: 20px 50px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 800;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: 0.4s;
-    box-shadow: 0 0 10px rgba(50, 231, 222, 0.1);
-}
-
-.btn-cursos-externo:hover {
-    background: var(--principal);
-    color: #000;
-    box-shadow: 0 0 35px var(--principal);
-    transform: translateY(-5px);
-}
-
-.btn-cursos-externo i {
-    font-size: 1.6rem;
-}
-
-/* Ajuste para o Widget da Colab55 */
-.vitrine-colab55 {
-    min-height: 400px; /* Evita que a página pule enquanto o widget carrega */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Garante que o widget não quebre o layout em telas pequenas */
-.c55-widget {
-    max-width: 100% !important;
-}
+.vitrine-colab55 { min-height: 400px; display: flex; justify-content: center; align-items: center; }
+.c55-widget { max-width: 100% !important; }
