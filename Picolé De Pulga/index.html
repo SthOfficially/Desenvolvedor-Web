@@ -4,113 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picolé de Pulga | PetShop & Sorveteria Tech</title>
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
+    <!-- Fundo Animado -->
     <canvas id="dog-canvas"></canvas>
 
-    <header>
-        <div class="container header-flex">
-            <div class="logo">
-                <i class="fas fa-ice-cream"></i> PICOLÉ DE PULGA
+    <!-- Navegação Estilo Café & Letras -->
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">PICOLÉ <span>DE</span> PULGA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#cardapio">Menu</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#doacao" class="btn-nav-alerta">Adoções</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Impacto Inicial) -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="cyber-badge">Protocolo de Refresco v3.0</span>
+            <h1 class="glitch" data-text="Picolé de Pulga">Onde a tecnologia<br>encontra o focinho gelado.</h1>
+            <p>O primeiro refúgio Cyber-Pet do país: Sorvetes artesanais e estética canina de alta precisão.</p>
+            <div class="cta-group">
+                <a href="https://wa.me/SEUNUMERO" class="btn-elegant">Agendar Banho & Tosa</a>
+                <a href="#cardapio" class="btn-outline">Ver Cardápio</a>
             </div>
-            <nav class="menu">
-                <a href="#home">Início</a>
-                <a href="#cardapio">Cardápio</a>
-                <a href="#servicos">PetShop</a>
-                <a href="#doacao" class="alerta-link">Doações</a>
-                <a href="SEU_LINK_DE_CURSOS" target="_blank" class="cyber-link">[ Cursos ]</a>
-            </nav>
         </div>
     </header>
 
-    <section id="home">
-        <div class="container text-center">
-            <h1 class="glitch" data-text="Picolé de Pulga">Picolé de Pulga</h1>
-            <p>Onde a tecnologia encontra o focinho gelado.</p>
-            <div class="container-btn-unico">
-                <a href="https://wa.me/SEUNUMERO" class="btn-me-chama-unico">
-                    <i class="fas fa-paw"></i> Agendar Banho & Tosa
-                </a>
+    <!-- Destaques (Features) -->
+    <section class="features">
+        <div class="container grid-features">
+            <div class="feature-box">
+                <i class="fas fa-microchip"></i>
+                <h3>Tecnologia Pet</h3>
+                <p>Equipamentos de última geração para o bem-estar do seu melhor amigo.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-ice-cream"></i>
+                <h3>Gelatos Zero</h3>
+                <p>Sabores formulados por nutricionistas veterinários (e humanos!).</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-shield-dog"></i>
+                <h3>Segurança Total</h3>
+                <p>Ambiente monitorado e protocolos de higiene nível hospitalar.</p>
             </div>
         </div>
     </section>
 
-    <section id="cardapio">
+    <!-- Seção de Menu Estilizada -->
+    <section id="cardapio" class="menu-section">
         <div class="container">
-            <h2 class="titulo-sessao">Nossos Sabores</h2>
-            <div class="grid-layout">
-                <div class="card-item card-item-3d">
-                    <div class="badge">Para Humanos</div>
-                    <i class="fas fa-ice-cream icon-neon"></i>
-                    <h3>Gelatos Tech</h3>
-                    <ul class="lista-sabores">
-                        <li><i class="fas fa-check"></i> Chocolate Belga</li>
-                        <li><i class="fas fa-check"></i> Pistache Ciano</li>
-                        <li><i class="fas fa-check"></i> Morango Neon</li>
-                        <li><i class="fas fa-check"></i> Baunilha 404</li>
-                    </ul>
+            <h2 class="section-title">Menu Cão-gelado & Tech</h2>
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Pistache Ciano (Humano)</h4>
+                        <span class="price">R$ 18</span>
+                    </div>
+                    <p>Gelato italiano com infusão de espirulina azul neon.</p>
                 </div>
-
-                <div class="card-item card-item-3d">
-                    <div class="badge">Para Pets</div>
-                    <i class="fas fa-bone icon-neon"></i>
-                    <h3>Cão-gelados</h3>
-                    <ul class="lista-sabores">
-                        <li><i class="fas fa-check"></i> Carne com Cenoura</li>
-                        <li><i class="fas fa-check"></i> Frango & Batata</li>
-                        <li><i class="fas fa-check"></i> Maçã (Zero Lactose)</li>
-                        <li><i class="fas fa-check"></i> Melancia Detox</li>
-                    </ul>
+                <!-- Item 2 -->
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Carne & Cenoura (Pet)</h4>
+                        <span class="price">R$ 12</span>
+                    </div>
+                    <p>100% natural, sem corantes, servido em osso de nylon biodegradável.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicos">
-        <div class="container">
-            <h2 class="titulo-sessao">Serviços & Adoção</h2>
-            <div class="grid-layout">
-                <div class="card-item">
-                    <div class="badge">Estética</div>
-                    <i class="fas fa-cut icon-neon-sm"></i>
-                    <h3>Banho & Tosa</h3>
-                    <p>Higiene completa com produtos premium para seu pet brilhar na rede.</p>
+                <!-- Item 3 -->
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Baunilha 404 (Humano)</h4>
+                        <span class="price">R$ 15</span>
+                    </div>
+                    <p>Cremoso clássico com pedaços de cookies "encriptados".</p>
                 </div>
-
-                <div id="doacao" class="card-item" style="border: 1px solid var(--alerta);">
-                    <div class="badge" style="background: var(--alerta);">Solidariedade</div>
-                    <i class="fas fa-heart icon-neon-sm" style="color: var(--alerta);"></i>
-                    <h3>Adoção de Cães e Gatos</h3>
-                    <p>Não compre, adote! Temos amigos esperando por um lar seguro.</p>
-                    <a href="#" class="btn-link-alerta">Quero Adotar</a>
+                <!-- Item 4 -->
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Melancia Detox (Pet)</h4>
+                        <span class="price">R$ 10</span>
+                    </div>
+                    <p>Refrescante e hidratante para os dias de sol intenso.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cursos">
-        <div class="container text-center">
-            <h2 class="titulo-sessao">Educação e Blindagem</h2>
-            <p>Conheça meus cursos de <strong>segurança de dados pessoais</strong> e minha trajetória acadêmica.</p>
-            <a href="SEU_LINK_DE_CURSOS" class="btn-principal" target="_blank">
-                <i class="fas fa-user-shield"></i> Acessar Certificações
-            </a>
+   <!-- Footer Profissional com Dados Fictícios -->
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-info">
+            <h3 class="logo-footer">PICOLÉ <span>DE</span> PULGA</h3>
+            <p>Conectando tecnologia e bem-estar para a nova era pet.</p>
         </div>
-    </section>
-
-    <footer>
-        <div class="container text-center">
-            <div class="botoes-contato-flex">
-                <a href="mailto:stephanie.gcsilva@outlook.com.br" class="btn-redes"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.instagram.com/_code.sth_/" target="_blank" class="btn-redes"><i class="fab fa-instagram"></i></a>
+        
+        <div class="footer-social-box">
+            <h4>Conecte-se</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
-            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">© 2026 CodeSth | Criatividade & Segurança</p>
         </div>
-    </footer>
+        
+        <div class="footer-contact-ficticio">
+            <h4>Unidade Matrix</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Neon, 1010 - Cyber District</p>
+            <p><i class="fas fa-phone"></i> (11) 4004-PETS</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="copyright">© 2026 Picolé de Pulga | Developed by CyberMind Design</div>
+    </div>
+</footer>
 
     <script src="JavaScript/script.js"></script>
 </body>
