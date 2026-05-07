@@ -390,3 +390,7 @@ footer {
     .menu a { margin: 15px 0; font-size: 1.1rem; margin-left: 0; }
     .menu-mobile { display: block; }
 }
+
+.vw-access-button {
+    bottom: 100px !important; /* Move o botão mais para cima se necessário */
+}
