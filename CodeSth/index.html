@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    <!-- INÍCIO VLIBRAS -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -17,9 +18,9 @@
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <!-- FIM VLIBRAS -->
+
     <header id="header">
         <div class="container header-flex">
             <a href="#home" class="logo"><img src="Imagens/Logo.png" alt="Logo CodeSth"></a>
@@ -27,7 +28,7 @@
             <nav class="menu" id="nav-menu">
                 <a href="#home">Início</a>
                 <a href="#consultoria">Segurança</a>
-                <a href="#solucoes-tech">Desenvolvimento</a>
+                <a href="#servicos">Desenvolvimento</a>
                 <a href="#portfolio-projetos">Modelos</a>
                 <a href="#contato">Contato</a>
             </nav>
@@ -49,7 +50,8 @@
     <section id="consultoria">
         <div class="container">
             <h2 class="titulo-sessao">Consultoria & Soluções Digitais</h2>
-            <div class="grid-layout">
+            <div class="grid-layout grid-5-cards">
+                <!-- Card 1: Investigação -->
                 <div class="card-item">
                     <div class="badge">Especialista</div>
                     <i class="fas fa-user-secret icon-neon"></i>
@@ -57,6 +59,7 @@
                     <p>Consultoria estratégica para localização de perfis, rastreio de membros da família e resolução de fraudes complexas.</p>
                 </div>
 
+                <!-- Card 2: Auditoria -->
                 <div class="card-item">
                     <div class="badge">Privacidade</div>
                     <i class="fas fa-eye-slash icon-neon"></i>
@@ -64,11 +67,28 @@
                     <p>Verificação profissional: descubra quais dados seus ou de terceiros estão expostos e aprenda como removê-los da rede.</p>
                 </div>
 
+                <!-- Card 3: Segurança Prática -->
                 <div class="card-item">
                     <div class="badge">Mentoria</div>
                     <i class="fas fa-user-shield icon-neon"></i>
                     <h3>Mentoria Anti-Golpe</h3>
                     <p>Treinamento direto para proteger WhatsApp, bancos e dispositivos contra engenharia social e acessos indevidos.</p>
+                </div>
+
+                <!-- Card 4: Proteção Familiar e Rastreamento -->
+                <div class="card-item">
+                    <div class="badge">Família</div>
+                    <i class="fas fa-street-view icon-neon"></i>
+                    <h3>Monitoramento & Rastreio</h3>
+                    <p>Mentoria prática e configuração completa de ferramentas como Google Family Link e iSharing para proteção e localização em tempo real de dependentes.</p>
+                </div>
+
+                <!-- Card 5: Redes Sociais Infantis -->
+                <div class="card-item">
+                    <div class="badge">Infantil</div>
+                    <i class="fas fa-child-reaching icon-neon"></i>
+                    <h3>Redes Sociais Seguras</h3>
+                    <p>Criação, blindagem e configuração de contas e redes sociais infantis controladas, garantindo um ambiente digital saudável e 100% monitorado para crianças.</p>
                 </div>
             </div>
         </div>
@@ -77,13 +97,15 @@
     <section id="servicos">
         <div class="container">
             <div class="grid-layout">
+                <!-- Card 1: Desenvolvimento Web -->
                 <div class="card-item">
                     <div class="badge">Web Design</div>
                     <i class="fas fa-code icon-neon"></i>
                     <h3>Criação de Sites</h3>
-                    <p>Desenvolvimento de sites profissionais, rápidos e com animações modernas.</p>
+                    <p>Desenvolvimento de sites profissionais, rápidos e com animações modernas (sem necessidade de DB).</p>
                 </div>
 
+                <!-- Card 2: Identidade Visual -->
                 <div class="card-item">
                     <div class="badge">Design</div>
                     <i class="fas fa-pen-nib icon-neon"></i>
@@ -91,16 +113,17 @@
                     <p>Criação de logotipos exclusivos que transmitem a essência e autoridade da sua marca.</p>
                 </div>
 
+                <!-- Card 3: Design Gráfico -->
                 <div class="card-item">
                     <div class="badge">Impressos</div>
                     <i class="fas fa-address-card icon-neon"></i>
                     <h3>Cartões de Visita</h3>
-                    <p>Design de cartões de visita profissionais (físicos ou digitais) para networking de elite.</p>
+                    <p>Design de cartões de visita profissionais (físicos ou digitais interativos) para networking de elite.</p>
                 </div>
             </div>
             
             <div class="container-btn-unico">
-                <a href="https://wa.me/5514991838153?text=Olá!+Vi+suas+soluções+de+Tecnologia+e+Design+e+quero+um+orçamento." class="btn-me-chama-unico">
+                <a href="https://wa.me/5514991838153?text=Olá!+Vi+suas+soluções+de+Tecnologia+e+Design+e+quero+um+orçamento." class="btn-me-chama-unico" target="_blank">
                     <i class="fab fa-whatsapp"></i> Me Chama no WhatsApp
                 </a>
             </div>
@@ -129,7 +152,7 @@
                     <div class="badge">Site</div>
                     <i class="fas fa-coffee icon-neon-sm"></i>
                     <h3>Café & Letras</h3>
-                    <p>Landing page sofisticada para cafeterias e livrarias.</p>
+                    <p>Landing page sofisticada para cafeterias e livrarias, com foco em ambiente acolhedor.</p>
                     <a href="https://sthofficially.github.io/Desenvolvedor-Web/Cafe&Letras/" target="_blank" class="btn-link">Ver Site</a>
                 </div>
             </div>
@@ -140,10 +163,8 @@
         <div class="container text-center">
             <h2 class="titulo-sessao">Fale com a Sth</h2>
             <div class="botoes-contato-flex">
-                <a href="mailto:stephanie.gcsilva@outlook.com.br" class="btn-redes"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.instagram.com/_code.sth_/" target="_blank" class="btn-redes"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/stephanie-g-c-silva/" target="_blank" class="btn-redes" title="LinkedIn Profissional">
-                    <i class="fab fa-linkedin-in"></i>
+                <a href="https://linktr.ee/_sth.officially_?utm_source=linktree_profile_share&ltsid=a34f8236-0262-4920-aeb1-e68146a9c328" target="_blank" class="btn-redes linktree-btn" title="Linktree Oficial">
+                    <i class="fas fa-network-wired"></i>
                 </a>
             </div>
         </div>
@@ -151,9 +172,9 @@
 
     <footer><p>© 2026 Sth – Tecnologia.</p></footer>
 
-    <a href="https://wa.me/5514991838153?text=EMERGÊNCIA+DIGITAL:+Preciso+de+ajuda+agora!" class="btn-emergencia-principal" target="_blank">
+    <!-- Botão de Emergência Apenas com Ícone de Triângulo -->
+    <a href="https://wa.me/5514991838153?text=EMERGÊNCIA+DIGITAL:+Preciso+de+ajuda+agora!" class="btn-emergencia-principal" target="_blank" title="Emergência 24h">
         <i class="fas fa-exclamation-triangle"></i>
-        <span class="tooltip-emergencia">Emergência 24h</span>
     </a>
 
     <script>
